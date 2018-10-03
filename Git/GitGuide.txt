@@ -11,6 +11,11 @@ git commit -m "message" <filename.txt>
 git push --mirror <url>
 
 
+Force push
+git push origin master --force
+
+
+
 Remoting
 add origin:
 git remote add origin <url>
@@ -25,3 +30,6 @@ git remote -v
 remove all remote origin:
 git remote rm origin
 
+Remove .git in order to reinitialize
+rm -rf .git
+git init

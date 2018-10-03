@@ -1,0 +1,73 @@
+
+****if statements****
+int tempf = 36;
+if (tempf<=32)
+	{
+		System.out.println("It is freezing at "+tempf);
+	}
+else if(tempf >=212)
+	{
+		System.out.println("It is above boiling at "+tempf);
+	}
+else
+	{
+		System.out.println("It is rather nice out at "+tempf);
+	}
+
+
+****switch statement****
+switch(var);
+	case 0:
+	{
+		System.out.println("you got 0")
+	}
+	case 1:
+	{
+		System.out.println("you got 1")
+	}
+	default:
+	{
+		System.out.println("you got something else")
+	}
+
+
+****for loop****
+
+for (initialization; termination; increment)
+	{
+		statement(i)
+	}
+
+int sum=0;
+for (int i=0 ; i<=5 ; i++)
+	{
+		sum=sum+i;
+	}
+
+
+****while loop****
+int j = 1;
+while(j<=10)
+{
+	System.out.println("This is line"+j);
+	j++;
+}
+
+
+
+****do while loop****
+int j=32;
+do 
+{
+	j++;
+	System.out.println("This is line "+j);
+}	while(j<=10);
+
+
+****Declare sizeable array****
+int[] arr = new int[10];
+	-make sure you do not use the syntax: int[10] arr; Wrong
+
+
+
+

@@ -1,0 +1,27 @@
+Configure
+git config --global user.name "jaschlak"
+git config --global user.email "jaschlak@gmail.com"
+git clone <url>
+
+push to sites without remoting
+git init
+git add <filename.txt>
+git status
+git commit -m "message" <filename.txt>
+git push --mirror <url>
+
+
+Remoting
+add origin:
+git remote add origin <url>
+
+
+change origin:
+git remote set-url origin <https://github.com/jaschlak/Mytest>
+
+check remote:
+git remote -v
+
+remove all remote origin:
+git remote rm origin
+

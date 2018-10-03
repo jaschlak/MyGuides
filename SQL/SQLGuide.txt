@@ -1,0 +1,149 @@
+--SELECT * FROM <table> ORDER BY <column>DESC;
+
+ 
+
+ 
+
+ 
+
+ 
+
+/* ---- Find how many rows tables have ----
+
+SELECT
+
+    [TableName] = so.name,
+
+    [RowCount] = MAX(si.rows)
+
+FROM
+
+    sysobjects so,
+
+    sysindexes si
+
+WHERE
+
+    so.xtype = 'U'
+
+    AND
+
+    si.id = OBJECT_ID(so.name)
+
+GROUP BY
+
+    so.name
+
+ORDER BY
+
+    2 DESC
+
+                */
+
+ 
+
+ 
+
+ 
+
+ 
+
+--SELECT * FROM <table> WHERE <column>=1;
+
+ 
+
+ 
+
+ 
+
+ 
+
+/* ---- like operator (similar to includes) ----
+
+SELECT * FROM <table> WHERE <column> LIKE '%<search criteria>%';
+
+                using "like", the % key acts as a wildcard like * in most other things
+
+                similarly the _ uses a fill in the blank so '_r%' would return any entry that has the second letter of "r"
+
+                to have anything that has at least characters us 'a_%_%'
+
+                AND/OR operators work between like statements I.E.- where [name] like '%Panel%' AND logcode_id like '%GET%';
+
+                For more info https://www.w3schools.com/sql/sql_like.asp
+
+                */
+
+ 
+
+ 
+
+/* ---- Multiple conditions can be shortened by using 'IN', the following do the same thing
+
+SELECT * FROM <table> WHERE <column> = 'Criteria1' or <column> = '<criteria2>';
+
+SELECT * FROM <table> WHERE <column> IN ('<Criteria1>','<Criteria2>');
+
+*/
+
+ 
+
+ 
+
+/*---- Joining Tables with search criterea ----
+
+SELECT <columns you want to include>   --if column header is not in all tables make sure to use table.column format
+
+FROM <table1>
+
+INNER JOIN table2>
+
+ON <condition you want met>;
+
+ 
+
+ 
+
+E.X.
+
+SELECT <table1>.<column>,<table2>.<column>, <column> -- make sure to specify the table if not all tables have the desired column.
+
+FROM <table1>
+
+INNER JOIN <table2>
+
+ON <table1>.<column> = <table2>.<column>;
+
+ 
+
+for more info: https://www.tutorialspoint.com/sql/sql-inner-joins.htm
+
+*/
+
+ 
+
+ 
+
+ 
+
+/* ---- Get rid of null values ----
+
+SELECT * FROM <table> WHERE <column> IS NOT NULL;
+
+*/
+
+ 
+
+/* ----Select First half of table----
+
+SELECT TOP 50 percent * FROM <table>;
+
+*/
+
+ 
+
+/* ----Select only date range----
+
+SELECT * FROM <table> where <column> BETWEEN '<lower bound criteria>' AND '<upper bound criteria>';
+
+*/

@@ -1,6 +1,11 @@
 Configure
 git config --global user.name "jaschlak"
 git config --global user.email "jaschlak@gmail.com"
+
+// Delete old password
+git config --global --unset user.password
+
+
 git clone <url>
 
 push to sites without remoting

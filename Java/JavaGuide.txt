@@ -69,5 +69,144 @@ int[] arr = new int[10];
 	-make sure you do not use the syntax: int[10] arr; Wrong
 
 
+****matrices****
+int[][] matrix = {{1,2,3},{4,5,6},{6,7,8,9,9,9,9,9}};
+matrix [i][j];
 
+
+****Class Access explanation****
+int noSpec; // Visible to all classes in the package
+public int pubSpec; // Visible to all classes in Java universe
+private int priSpec; // Visible only within current class
+protected int protSpec; // Visible to all derived classes or classes in this package
+	
+
+****Package Handling****
+(Both classes import same package)
+Class #1:
+"
+package oop;
+
+public class TestClass 
+{
+	int noSpec; // Visible to all classes in the package
+	public int pubSpec; // Visible to all classes in Java universe
+	private int priSpec; // Visible only within current class
+	protected int protSpec; // Visible to all derived classes or classes in this package
+	
+	// These are all local variables
+	
+}
+"
+
+Class #2: (run this class as it has the main class)
+"package oop;
+
+public class MainClass 
+{
+
+	public static void main(String[] args) 
+	{
+		TestClass testing = new TestClass();
+
+		testing.noSpec = 32;
+		testing.pubSpec = 22;
+		//testing.priSpec = 25; Doesn't work because it has been made private
+		testing.protSpec = 12;
+
+		// These are all instance variables
+	}
+
+}
+
+
+**** Defining Methods ****
+
+Access Modifiers
+public/private/protected
+
+Return Type
+Bool/Double/Float/String/Char/Void
+
+parameters = input variables going into the method
+
+Definition:
+AccessModifier ReturnType MethodName(Parameters)
+{
+	body
+}
+
+**** Defining Constructors ****
+
+Definition:
+AccessModifier ConstructorName(Parameter)
+{
+body
+}
+
+
+**** Getters/Setters ****
+
+// These are used to modify or obtain private variables
+
+ExampleCode:
+Class 1:
+"
+package getset;
+
+public class TestClass 
+{
+	private double num1;
+	private double num2;
+
+	public double getNum1()
+	{
+		return num1;
+	}
+	
+	public double getNum2()
+	{
+		return num2;
+	}
+	
+	public void setNum1(double a)
+	{
+		num1 = a;
+	}
+	
+	public void setNum2(double a)
+	{
+		num2 = a;
+	}
+
+}
+"
+
+Class 2: (run this class as it has the main class)
+"
+package getset;
+
+public class MainClass
+{
+
+	public static void main(String[] args) 
+	{
+		
+		TestClass_GS tester = new TestClass();
+		
+		System.out.println(tester.getNum1());     	// output: 0
+		System.out.println(tester.getNum2()+"\n");	// output: 0
+	
+		tester.setNum1(5);
+		tester.setNum2(10);
+		
+		System.out.println(tester.getNum1());		// output 5
+		System.out.println(tester.getNum2()+"\n"); 	// output 10
+			
+		
+
+	}
+
+}
+"
 

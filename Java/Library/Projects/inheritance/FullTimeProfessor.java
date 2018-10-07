@@ -8,7 +8,7 @@ public class FullTimeProfessor extends Staff
 	private int numberOfCourses;
 	
 	public FullTimeProfessor(String firstName, String lastName, int phoneNumber, String email, String address,
-			String department, int officeNumber, String OfficeHours, int officePhone, int numberOfCourses) 
+			String department, int officeNumber, String officeHours, int officePhone, int numberOfCourses) 
 	{
 		super(firstName, lastName, phoneNumber, email, address, department);
 		this.officeNumber = officeNumber;

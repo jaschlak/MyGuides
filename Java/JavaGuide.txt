@@ -210,3 +210,10 @@ public class MainClass
 }
 "
 
+
+
+
+" *****PolyMorphism*****
+method overloading --> Static Polymorphism --> Constructor has the same name, Diff Parameters             --> Compiler Decides what to run
+method overriding  --> Dynamic Polymorphism -> Derived Class implements method of Base Class (diff body)  --> RunTime Decides what to run
+

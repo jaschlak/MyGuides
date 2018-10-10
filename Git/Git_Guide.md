@@ -23,7 +23,7 @@
 ## Troubleshooting
 
     git push origin master --force                         # sometimes you need to force 
-                                                           # the push (I.E. changed local repo location)
+                                                             the push (I.E. changed local repo location)
     git remote -v                                          # see where the remote origin is pointing
     git -rf .git                                           # uninitiate local .git file
 

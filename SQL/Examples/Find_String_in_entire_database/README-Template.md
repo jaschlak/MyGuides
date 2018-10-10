@@ -6,10 +6,15 @@ This will find the specific string you want in any database you point it at.
 ## Code
 
 declare @UNID VARCHAR(255);
+
 declare @TAB_NAME VARCHAR(255);
+
 declare @COL_NAME VARCHAR(255);
+
 declare @SQL NVARCHAR(1024);
+
 declare @COUNT INT;
+
 
 DECLARE  MY_CURSOR CURSOR for
 SELECT TABLE_NAME,COLUMN_NAME

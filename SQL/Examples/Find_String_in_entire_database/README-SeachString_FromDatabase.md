@@ -20,7 +20,7 @@ SELECT TABLE_NAME,COLUMN_NAME
 
 
 	
-SET @UNID = '<string desired here>'
+SET @UNID = '<<string desired here>>'
 
 
 

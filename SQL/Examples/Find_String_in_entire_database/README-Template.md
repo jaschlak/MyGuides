@@ -77,7 +77,7 @@ DEALLOCATE MY_CURSOR
 
 
 
-```
-## Note you will need to take this code and pass it into another Query.
-```
+
+## Note: you will need to take this code and pass it into another Query.
+
 

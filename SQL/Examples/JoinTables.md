@@ -14,4 +14,4 @@ ON \<table1\>.\<column\> = \<table2\>.\<column\>;
 
 ```
 make sure to specify the table if not all tables have the desired column.
-```
+```  

@@ -12,4 +12,4 @@ BEGIN
 	SET @i = @i + 1  
 	<Do something>;  
 
-END
+END  

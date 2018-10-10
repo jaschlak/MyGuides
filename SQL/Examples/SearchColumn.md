@@ -10,4 +10,4 @@ SELECT * FROM \<table\> WHERE <column> IN ('\<Criteria1\>','\<Criteria2\>');
 
 ```
 "_" represent wildcard for single space
-```
+```  

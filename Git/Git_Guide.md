@@ -13,7 +13,17 @@
 	git clone "\<insert url\>"                  # clone a repository 
                                                 # (copy from repository website)
 	
-	
+
+## Setup
+
+
+    git config --global user.name "\<insert username\>"    # set username
+    git config --global user.email "\<insert e-mail\>"     # set e-mail
+    git config --global --unset user.password              # delete user password
+    git remote add origin "\<repo url\>"                   # Sets origin url
+    git init                                               # set git workspace here
+    git clone "\<insert url\>"                             # clone a repository 
+
 ## Normal Workflow
 
 	git init 									# initiate workspace

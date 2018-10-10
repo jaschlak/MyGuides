@@ -1,8 +1,8 @@
 
 # Return percentage of Table
 
-Only return percentage of a table
+    Only return percentage of a table
 
 ## Code:
 
-SELECT TOP 50 percent * FROM <table>;
+    SELECT TOP 50 percent * FROM <table>;

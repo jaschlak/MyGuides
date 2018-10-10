@@ -3,7 +3,7 @@
 This will find the specific string you want in any database you point it at.
 
 
-## Code  
+## Code:  
 declare @UNID VARCHAR(255);  
 declare @TAB_NAME VARCHAR(255);  
 declare @COL_NAME VARCHAR(255);  

@@ -2,7 +2,7 @@ package experiements;
 
 class Parent 
 {
-	public void show()
+	public void Show()
 	{
 		System.out.println("Parent is showing up");
 	}

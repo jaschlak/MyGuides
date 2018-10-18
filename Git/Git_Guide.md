@@ -27,3 +27,6 @@
     git remote -v                                          # see where the remote origin is pointing
     git -rf .git                                           # uninitiate local .git file
 
+## Branching
+
+    git clone -b <branch name> --single-branch <repo url>  # Clones branch of repo to this path

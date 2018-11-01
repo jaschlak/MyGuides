@@ -7,12 +7,11 @@
     
     (This page includes troubleshooting)
     
-## Code:
+## Creating my tables: Stock_Ticker, Stock_Company, Stock_Type, Stock_News
 
-    -- Create my tables
     USE Jordan_Test
 
-    /*
+
     -- Creates the Stock Ticker Table
     CREATE TABLE Stock_Ticker
     (
@@ -49,7 +48,7 @@
      News	TEXT
     );
     
-    
+## Populating the tables
    
     -- Populating Stock_Ticker
     INSERT INTO Stock_Ticker
@@ -106,8 +105,6 @@
     (000000, 'BAD');
 
 
-    -- SELECT * FROM Stock_News
-
     -- Populating Stock Type
     INSERT INTO Stock_Type
     VALUES
@@ -124,10 +121,9 @@
     (6541, (SELECT TYPE FROM Stock_Ticker
     WHERE ticker LIKE 'TSLA'));
 
-
-    -- unid of Stock_News, BAD was taken to integer state of 0 instead of 000000
-    -- Replace value with 222222
-
+----------------------------------------------------
+Note: unid of Stock_News, BAD was taken to integer state of "0" instead of 000000, Replacing value with 222222
+----------------------------------------------------
 
     UPDATE Stock_News
     SET unid = 222222
@@ -140,20 +136,26 @@
 
     ALTER TABLE Stock_Ticker
     ADD News TEXT;
-
-    -- Messed up and made NEWS type 'TEXT', should be INTEGER
+----------------------------------------------------
+Note: I messed up and made NEWS type 'TEXT', should be INTEGER
+----------------------------------------------------
     ALTER TABLE Stock_Ticker
     ALTER COLUMN News INTEGER;
-    -- Got the following Error: Cannot alter column 'News' to be data type int. Just Delete it
+    
+----------------------------------------------------    
+Got the following Error: Cannot alter column 'News' to be data type int. Just going to delete it
+----------------------------------------------------
 
     ALTER TABLE Stock_Ticker DROP COLUMN News;
 
-    -- Adding column to ticker with unid of News info
+    -- Adding column to ticker and populating using unid of News info
 
     ALTER TABLE Stock_Ticker
     ADD News INTEGER;
-    -- Turns out you still have to replace null values instead of adding a new row to a column
-
+    
+----------------------------------------------------
+Note: Turns out you still have to replace null values instead of adding a new row to a column
+----------------------------------------------------
 
 
     -- Adding column to ticker with unid of News info -- Finally
@@ -175,16 +177,16 @@
 
 
 
-
+/*
     SELECT * FROM Stock_Ticker;
     SELECT * FROM Stock_Company;
     SELECT * FROM Stock_News;
     SELECT * FROM Stock_Type;
+*/
 
 
 
-
-    -- Now the goal is to Join all useful info onto one table
+## Joining info into one useful table
 
 
     SELECT Stock_Ticker.unid, ticker, Company, Stock_Type, GoodIdea, Stock_Ticker.News AS ticker_unid FROM Stock_Ticker
@@ -200,6 +202,5 @@
 
 
     -- Woohoo!
-    */
 
 

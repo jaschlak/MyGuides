@@ -10,6 +10,7 @@
     import pandas as pd
     path = "C://Users/jschlak/Desktop/TempLogs/MatsonAlarm/"
     file = 'caruthers-hs-users.csv'
+    column = 5
 
 
     # Imports a csv and uses specified (path, file, and column inside csv)
@@ -22,9 +23,4 @@
         print(df[:])
         
         
-    column = 0
-    unique_csv_duplicates(path,file,column)
-    column = 1
-    unique_csv_duplicates(path,file,column)
-    column = 5
     unique_csv_duplicates(path,file,column)

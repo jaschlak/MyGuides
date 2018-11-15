@@ -30,3 +30,7 @@
 ## Branching
 
     git clone -b <branch name> --single-branch <repo url>  # Clones branch of repo to this path
+    git branch <insert branch name>                        # Creates branch name
+    git checkout <insert branch name>                      # Moves to new branch
+    git reset --hard <remote name>/<branch name>           # Resets branch to original position
+    git clean -f -d                                        # Cleans up branch, especially helpful after a reset

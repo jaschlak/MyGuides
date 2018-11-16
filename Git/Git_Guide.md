@@ -4,19 +4,19 @@
 
 ## Setup
 
-    git config --global user.name "\<insert username\>"    # set username
-    git config --global user.email "\<insert e-mail\>"     # set e-mail
+    git config --global user.name "<insert username>"      # set username
+    git config --global user.email "<insert e-mail>"       # set e-mail
     git config --global --unset user.password              # delete user password
-    git remote add origin "\<repo url\>"                   # Sets origin url
+    git remote add origin "<repo url>"                     # Sets origin url
     git init                                               # set git workspace here
-    git clone "\<insert url\>"                             # clone a repository 
+    git clone "<insert url>"                               # clone a repository 
 
 ## Normal Workflow
 
     git init                                               # initiate workspace
     git add .                                              # add current workspace to repository
     git status                                             # doublecheck this is what you expected
-    git commit -m "\<insert message about what you added\>"# commits changes, preparing to add to repo
+    git commit -m "<insert message about what you added>"  # commits changes, preparing to add to repo
     git push origin master                                 # pushes changes to repo
 
 
@@ -30,7 +30,9 @@
 ## Branching
 
     git clone -b <branch name> --single-branch <repo url>  # Clones branch of repo to this path
-    git branch <insert branch name>                        # Creates branch name
-    git checkout <insert branch name>                      # Moves to new branch
+    git branch <branch name>                               # Creates branch name
+    git checkout <branch name>                             # Moves to new branch
+    git checkout -b <branch name>                          # Creates branch and moves you to branch
     git reset --hard <remote name>/<branch name>           # Resets branch to original position
     git clean -f -d                                        # Cleans up branch, especially helpful after a reset
+    

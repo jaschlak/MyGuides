@@ -33,6 +33,13 @@
     git branch <branch name>                               # Creates branch name
     git checkout <branch name>                             # Moves to new branch
     git checkout -b <branch name>                          # Creates branch and moves you to branch
+
+
+## Versioning    
+    git log                                                # See commit history
+    git checkout <hash from log>                           # Revert branch to just before last commit
+    git revert <commit hash>                               # Completely undo a commit
+    git checkout -b <new branch name>                      # Create new branch for this version
+    
     git reset --hard <remote name>/<branch name>           # Resets branch to original position
     git clean -f -d                                        # Cleans up branch, especially helpful after a reset
-    

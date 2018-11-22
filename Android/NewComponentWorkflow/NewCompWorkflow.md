@@ -4,7 +4,7 @@
     
 ## Steps:
 
-     1. Go to google.developer.com
+     1. Go to https://developers.google.com/
      2. Expand the develop tab on the left
      3. Select API Guides (Topics grouped by category)
      4. Select category Ex. Media and Sound

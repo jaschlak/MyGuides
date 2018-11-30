@@ -8,7 +8,7 @@
     
 ## Multiple inputs:
 
-    ^(?!.*<1st negate word>|<2nd negate word>).*<contains word>.* 
+    ^(?=.*?\b<include1>\b)(?=.*?\b<include2>\b)((?!<disregard1>|<disregard2>).)*$
     
 ## Example code
 

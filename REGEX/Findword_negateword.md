@@ -4,10 +4,14 @@
     
 ## Code:
 
-    ^(?!.*<negate word>).*<contains word>.*
+    ^(?!.*<negate word>).*<contains word>.* 
+    
+## Multiple inputs:
+
+    ^(?!.*<1st negate word>|<2nd negate word>).*<contains word>.* 
     
 ## Example code
 
-    ^(?!.*socket).*error.*
+    ^(?!.*socket).*error.*                                                  Finds word "error", but wont report if the word "socket" is in the line
     
 Note: you can add a $ to the end to close the search bar

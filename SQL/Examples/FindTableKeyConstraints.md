@@ -4,7 +4,7 @@
     
 ## Code:
 
-    DECLARE @item varchar(100) = 'vx_evt'
+    DECLARE @item varchar(100) = '<insert table name>'
 
     SELECT RC.CONSTRAINT_NAME FK_Name
     , KF.TABLE_SCHEMA FK_Schema

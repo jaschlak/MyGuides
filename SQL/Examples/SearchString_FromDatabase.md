@@ -15,13 +15,13 @@
     DECLARE  MY_CURSOR CURSOR for  
     SELECT TABLE_NAME,COLUMN_NAME  
         FROM INFORMATION_SCHEMA.COLUMNS  
-        WHERE TABLE_NAME NOT IN ('vx_flat_evt','vx_evt','vx_aud','vx_dev_ext')  
-        AND DATA_TYPE IN ('nvarchar','varchar')  
-        AND CHARACTER_MAXIMUM_LENGTH = 24  
+        WHERE --TABLE_NAME NOT IN ('vx_flat_evt','vx_evt','vx_aud','vx_dev_ext')  
+       DATA_TYPE IN ('nvarchar','varchar')  
+        --AND CHARACTER_MAXIMUM_LENGTH = 24  
         ORDER BY TABLE_NAME,COLUMN_NAME;
 
-		
-    SET @UNID = '\<string desired here\>'
+        
+    SET @UNID = '<enter string here>'
 
 
 
@@ -30,11 +30,11 @@
     WHILE @@FETCH_STATUS = 0  
     BEGIN  
         --SET @SQL = 'SELECT @CNT = COUNT(*) FROM ' +  @TAB_NAME + ' WHERE ' + @COL_NAME + ' = ''' + @UNID + '''';  
-        SET @SQL = 'SELECT @COUNT=COUNT(*) FROM ' +  @TAB_NAME + ' WHERE ' + @COL_NAME + ' = ''' + @UNID + '''';  	
+        SET @SQL = 'SELECT @COUNT=COUNT(*) FROM ' +  @TAB_NAME + ' WHERE ' + @COL_NAME + ' like ''' +@UNID + '''';  	
         --PRINT @SQL  
         EXEC SP_EXECUTESQL @SQL, N'@COUNT int OUTPUT', @COUNT=@COUNT OUTPUT  	
         --PRINT 'COUNT: ' + CAST(@COUNT AS VARCHAR(10));
-	
+
     IF @COUNT > 0  
     BEGIN  
         PRINT '--  ' + @TAB_NAME + ' ' +  @COL_NAME  + ' CONTAINS ' + CAST(@COUNT AS VARCHAR(10)) + ' INSTANCES OF ' + @UNID;  

@@ -38,7 +38,7 @@
     IF @COUNT > 0  
     BEGIN  
         PRINT '--  ' + @TAB_NAME + ' ' +  @COL_NAME  + ' CONTAINS ' + CAST(@COUNT AS VARCHAR(10)) + ' INSTANCES OF ' + @UNID;  
-        PRINT 'SELECT '''+ @TAB_NAME + ''', * FROM ' +  @TAB_NAME + ' WHERE ' + @COL_NAME + ' = ''' + @UNID + '''';  
+        PRINT 'SELECT '''+ @TAB_NAME + ''', * FROM ' +  @TAB_NAME + ' WHERE ' + @COL_NAME + ' like ''' + @UNID + '''';  
     END  
     FETCH NEXT FROM MY_CURSOR INTO @TAB_NAME,@COL_NAME;  
     END 

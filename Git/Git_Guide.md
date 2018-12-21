@@ -8,24 +8,21 @@
     git config --global user.email "<insert e-mail>"       # set e-mail
     git config --global --unset user.password              # delete user password
     git remote add origin "<repo url>"                     # Sets origin url
+    
+## New Install Workflow
+
     git init                                               # set git workspace here
     git clone "<insert url>"                               # clone a repository 
 
-## Normal Workflow
+## New Install Workflow
 
-    git init                                               # initiate workspace
     git add .                                              # add current workspace to repository
     git status                                             # doublecheck this is what you expected
     git commit -m "<insert message about what you added>"  # commits changes, preparing to add to repo
     git push origin master                                 # pushes changes to repo
 
 
-## Troubleshooting
 
-    git push origin master --force                         # sometimes you need to force 
-                                                             the push (I.E. changed local repo location)
-    git remote -v                                          # see where the remote origin is pointing
-    git -rf .git                                           # uninitiate local .git file
 
 ## Branching
 
@@ -43,3 +40,17 @@
     
     git reset --hard <remote name>/<branch name>           # Resets branch to original position
     git clean -f -d                                        # Cleans up branch, especially helpful after a reset
+    
+    
+## Troubleshooting
+
+    git push origin master --force                         # sometimes you need to force 
+                                                             the push (I.E. changed local repo location)
+    git remote -v                                          # see where the remote origin is pointing
+    git -rf .git                                           # uninitiate local .git file
+    git merge --abort                                      # abort merge    
+    
+## Pull and overwrite local changes
+
+    git fetch --all                                        # fetches (pulls without merging) all branch info
+    git reset --hard origin/<branch>                       # overwrites local data

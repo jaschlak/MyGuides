@@ -50,6 +50,10 @@
     git -rf .git                                           # uninitiate local .git file
     git merge --abort                                      # abort merge    
     
+    git fetch                                              # Use these two lines if you run into trouble with committing before pulling
+    git merge
+    
+    
 ## Pull and overwrite local changes
 
     git fetch --all                                        # fetches (pulls without merging) all branch info

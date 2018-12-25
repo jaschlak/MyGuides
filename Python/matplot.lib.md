@@ -62,3 +62,101 @@
     axes2.plot(y,x);
     axes2.set_title('Smaller Plot');
 
+
+    #%% More Object Oriented 
+
+    #Single plot inside subplot
+    fig, axes = plt.subplots()
+
+    axes.plot(x,y);
+
+
+    #Set number of rows/columns in subplot
+    fig, axes = plt.subplots(nrows = 1, ncols = 2);
+
+    # Overlap issues occured, use: "plt.tight_layout();"
+
+
+    #Using the fig, axes format, this enables you to use for loops to populate plots
+    for current_ax in axes:
+        current_ax.plot(x,y);
+        
+        
+    #Set number of rows/columns in subplot
+    fig, axes = plt.subplots(nrows = 1, ncols = 2);
+
+    # Plot on first subplot
+    axes[0].plot(x,y);
+
+    # Plot on second subplot
+    axes[1].plot(y,x);
+
+
+    #%% Figure size, aspect ratio, and DPI
+
+    #(figsize = (width, height), dpi = ndots, )
+    fig = plt.figure(figsize = (3, 2), dpi = 100);
+
+    ax = fig.add_axes([0,0,1,1]);
+
+    ax.plot(x,y);
+
+    #%% Adding more axes with these features
+
+
+    fig, axes = plt.subplots(nrows = 2, ncols = 1, figsize = (8, 2), dpi = 100);
+
+    axes[0].plot(x,y);
+
+    axes[1].plot(y,x);
+
+    #Gets rid of overlap
+    plt.tight_layout();
+
+
+    #%% Saving Figures
+
+    fig = plt.figure();
+
+    fig.set_axes([0,0,1,1]);
+    ax.plot(x,y);
+    ax.set_title('Title');
+    ax.set_xlabel('x label');
+    ax.set_ylabel('y label');
+
+
+
+    #fig.savefig('<filename>.<ext>', dots per in, );
+    fig.savefig('my_picture.png', dpi = 100)
+
+    #%% Legends
+
+    fig = plt.figure();
+
+    ax = fig.add_axes([0,0,1,1]);
+
+    # making plots with legend info
+    ax.plot(x, x**2, label = 'X Sqared');
+    ax.plot(x, x**3, label = 'X Cubed');
+
+    ax.legend();
+
+    #%% Legends with locations
+    # More info https://matplotlib.org/api/legend_api.html?highlight=legend#module-matplotlib.legend
+
+    fig = plt.figure();
+
+    ax = fig.add_axes([0,0,1,1]);
+
+    # making plots with legend info
+    ax.plot(x, x**2, label = 'X Sqared');
+    ax.plot(x, x**3, label = 'X Cubed');
+
+    # legend, have matplotlib find best location
+    ax.legend(loc = 0);
+
+    # legend in center
+    ax.legend(loc = 10);
+
+    # legend at tuple specification
+    ax.legend(loc = (.1, .1));

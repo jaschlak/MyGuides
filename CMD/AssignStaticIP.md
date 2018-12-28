@@ -8,7 +8,7 @@
     ipconfig /all           # check your network adapter name, ip address,subnet mask, default gateway, and DNS server address
     
                             # assign ip address using ipconfig values
-    netsh interface ip set address name="<network adapter name>" static <new ip address> <new subnet mask> <new Default Gateway>
+    netsh interface ip set address name="<adapter name>" static <ip address> <subnet mask> <Default Gateway>
     
                             # assign DNS server address
     netsh interface ip set dns name = "<network adapter name> static <DNS server address>

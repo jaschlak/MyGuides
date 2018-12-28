@@ -53,6 +53,9 @@
     git fetch                                              # Use these two lines if you run into trouble with committing before pulling
     git merge
     
+    git reflog                                             # See historical changes that you can rebase on
+    git reset --hard HEAD@{<insert head number>}           # Rebase on that head               
+    
     
 ## Pull and overwrite local changes
 

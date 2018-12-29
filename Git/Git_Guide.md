@@ -15,7 +15,8 @@
     git clone "<insert url>"                               # clone a repository 
 
 ## New Install Workflow
-
+    
+    git pull origin master                                 # pull and merge remote repo with local
     git add .                                              # add current workspace to repository
     git status                                             # doublecheck this is what you expected
     git commit -m "<insert message about what you added>"  # commits changes, preparing to add to repo

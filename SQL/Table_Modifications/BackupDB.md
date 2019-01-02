@@ -6,3 +6,4 @@
 ## Code:
 
     BACKUP DATABASE <db name> TO DISK = '<path>\<filename>.bak' WITH INIT, COMPRESSION;
+    

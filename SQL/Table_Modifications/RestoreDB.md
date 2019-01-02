@@ -5,5 +5,5 @@
 ## Code:
 
     RESTORE DATABASE <db name>
-    FROM DISK = 'path\filename.bak'
+    FROM DISK = '<path\filename.bak>'
     WITH REPLACE

@@ -8,7 +8,7 @@
     FROM DISK = '<path\filename.bak>'
     WITH REPLACE
     
-## The backup set holds a backup of a database other than the existing 'dbname' database.?, Use this:
+#### Error: The backup set holds a backup of a database other than the existing 'dbname' database.?, Use this:
 
     USE [master]
     RESTORE DATABASE [<dbname>] 

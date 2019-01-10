@@ -83,11 +83,11 @@
     
 #### Create and populate new branch
     git checkout -b <branch B name>                             # Creates branch and moves you to branch
-    git pull source <branch B name> -m "<insert message>        # pulls branch from the remote source repo
+    git pull source <branch B name> -m "<insert message>"       # pulls branch from the remote source repo
     
-###### repeat the last two steps for all branches you want to transfer
+###### Note: repeat the last two steps for all branches you want to transfer
     
-#### push all branches to destination repo
+#### Push all branches to destination repo
     git push dest --all                                         # Pushes all branches to destination repository
     
 

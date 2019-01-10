@@ -74,20 +74,21 @@
     
 ## Workflow transfer repo branches
 
-    *Setup*
+#### Setup
+
     Go to new path you want to user
     git remote add source <insert source URL>                   # Insert the remote repo link you want to copy from (I.E. github)
     git remote add dest <insert destination URL>                # Insert the remote repo link you want to copy to (I.E. bitbucket)
     git clone -b <1st branch name> --single-branch <repo url>   # Clones branch of repo to this path
     
-    *Create and populate new branch*
+#### Create and populate new branch
     git checkout -b <branch B name>                             # Creates branch and moves you to branch
-    git pull source <branch B name>                             # pulls branch from the remote source repo
+    git pull source <branch B name> -m "<insert message>        # pulls branch from the remote source repo
     
-    repeat the last two steps for all branches you want to transfer
+###### repeat the last two steps for all branches you want to transfer
     
-    *push all branches to destination repo*
-    git push dest --all
+#### push all branches to destination repo
+    git push dest --all                                         # Pushes all branches to destination repository
     
 
     

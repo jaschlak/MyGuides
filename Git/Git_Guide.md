@@ -82,7 +82,7 @@
     
     Create and populate new branch
         git checkout -b <branch B name>                             # Creates branch and moves you to branch
-        git pull source <branch B name> -m "<insert message>"       # pulls branch from the remote source repo
+        git pull source <branch B name> -q                          # pulls branch quietly without requiring a message
     
     Note: repeat the last two steps for all branches you want to transfer
     

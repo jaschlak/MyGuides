@@ -78,11 +78,15 @@
         Go to new path you want to user
         git remote add source <insert source URL>                   # Insert the remote repo link you want to copy from (I.E. github)
         git remote add dest <insert destination URL>                # Insert the remote repo link you want to copy to (I.E. bitbucket)
+        
+    Note: Use the branch that is the earliest version you want as a "trunk" for the branches to come from
         git clone -b <1st branch name> --single-branch <repo url>   # Clones branch of repo to this path
     
     Create and populate new branch
-        git checkout -b <branch B name>                             # Creates branch and moves you to branch
-        git pull source <branch B name> -q                          # pulls branch quietly without requiring a message
+        git checkout -b <new branch name>                           # Creates branch and moves you to branch
+        git reflog                                                  # look for the Head# that corresponds to your trunk
+        git reset --hard HEAD@{<head#>}                             # Resets your history and version to the trunk version
+        git pull source <new branch name> -q                        # pulls (and merges) branch quietly without requiring a message
     
     Note: repeat the last two steps for all branches you want to transfer
     

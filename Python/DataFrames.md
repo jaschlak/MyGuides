@@ -14,6 +14,10 @@
     
         np.random.seed(101)
         df = pd.DataFrame(randn(5,4),['A','B','C','D','E'],['W','X','Y','Z'])
+        
+    ## Create dataframe from lists
+    
+        df = pd.DataFrame.from_dict({'<list name>':<list variable>, '<list 2 name>':<list 2 variable>});
 
     ## Select a column from a DataFrame
     

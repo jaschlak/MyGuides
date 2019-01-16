@@ -28,7 +28,13 @@
     df.to_sql('<new table name (can't exist)>', engine, index=False)
 
 
+## Create database
 
+    engine = sqlalchemy.create_engine("mssql+pyodbc://<SQL username>:<SQL pass>@localhost:1433/<table>?driver=<ODBC+driver+name>");
+    con = engine.connect();
+    con.execute("create database <new db name>");
+    
+    
 # pyodbc version:
     
 

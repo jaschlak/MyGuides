@@ -29,4 +29,8 @@
   2. python3 -V                     #checks for python version
   2. sudo apt-get install -y python3-pip
   2. (optional) sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+  
+## Install Chromium
+
+    sudo apt install -y chromium-browser
     

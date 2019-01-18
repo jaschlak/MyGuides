@@ -72,6 +72,17 @@
     git commit --amend -m "<input new message>"                     # ammends the new changes and comment to the old commit to the local repo
     git push --force <remote name> <branch name>                    # Overwrites the old commit with the new one on the remote repo
     
+    
+## graphing branch history (a few different options
+
+    git log --graph                                                 # normal graph
+    git log --graph --simplify-by-decoration --pretty=format:'%d' --all #siplifies description
+    git log --graph --oneline --decorate --all                      # decorate (show branch connection for every line of description)
+    
+    #these two lines need to be run together, dims descriptions
+    git log --graph --all \                                         
+    --format='%C(cyan dim) %p %Cred %h %C(white dim) %s %Cgreen(%cr)%C(cyan dim) <%an>%C(bold yellow)%d%Creset'
+    
 ## Workflow transfer repo branches
 
     Setup

@@ -34,3 +34,35 @@
 
     sudo apt install -y chromium-browser
     
+## Install MySQL
+
+    sudo apt-get install mysql-server
+    sudo ufw allow mysql                                                            # allow remote access
+    systemctl start mysql                                                           # Start MySQL service
+    systemctl enable mysql                                                          # Ensure server runs after reboot
+    /usr/bin/mysql -u root -p                                                       # Run SQL Shell as root user, should prompt "mysql>"
+    
+    #The following need to be in mysql:
+    UPDATE mysql.user SET Password = PASSWORD('password') WHERE User = 'root';      # Sets root password
+    FLUSH PRIVILEGES;                                                               # Make those changes take effect by resetting user info
+    SELECT User, Host, authentication_string FROM mysql.user;                       # See what users are allowed on database
+    CREATE DATABASE demodb;                                                         # Create a database
+    SHOW DATABASES;                                                                 # Shows databases
+    
+    #These 2 lines add a new database user
+    INSERT INTO mysql.user (User,Host,authentication_string,ssl_cipher,x509_issuer,x509_subject)
+    VALUES('demouser','localhost',PASSWORD('demopassword'),'','','');
+    FLUSH PRIVILEGES;
+    
+    GRANT ALL PRIVILEGES ON demodb.* to demouser@localhost;                         # Grant database permissions
+    FLUSH PRIVILEGES;
+    
+    # These 2 lines verify the privilages have been set
+    SHOW GRANTS FOR 'demouser'@'localhost';
+    2 rows in set (0.00 sec)
+    
+##### More info at https://support.rackspace.com/how-to/installing-mysql-server-on-ubuntu/ , continue the guide
+    
+    
+    
+    

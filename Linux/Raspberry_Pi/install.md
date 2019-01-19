@@ -62,6 +62,30 @@
     2 rows in set (0.00 sec)
     
 ##### More info at https://support.rackspace.com/how-to/installing-mysql-server-on-ubuntu/ , continue the guide
+
+
+
+## Install git
+
+    sudo apt install git
+
+## Upgrade Python to 3.6
+
+    sudo add-apt-repository ppa:deadsnakes/ppa                                      # PPA for deadsnakes, allows to import 3rd party modules
+    sudo apt-get update                                                             # update the applied changes
+    sudo apt-get install python3.6                                                  # upgrade to pythong 3.6
+    pip3 --version                                                                  # see if pip is installed
+    sudo -H pip3 install --upgrade pip                                              # upgrade 
+
+
+	
+
+## Uninstall or install pip/pip3
+
+    python -m pip uninstall pip                                                     # uninstall pip 
+    python3 -m pip uninstall pip                                                    # uninstall pip3
+
+
     
     
     

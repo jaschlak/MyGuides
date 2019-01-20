@@ -69,6 +69,19 @@
 
     sudo apt install git
 
+
+## Install Spyder3 for Python
+
+    apt install spyder3
+
+## Trader dependencies
+
+    pip3 install yahoofinancials
+    apt install python3-pyodbc
+
+
+##### I don't recommend upgrading to python3.6 or pop3, issues with pip3
+
 ## Upgrade Python to 3.6
 
     sudo add-apt-repository ppa:deadsnakes/ppa                                      # PPA for deadsnakes, allows to import 3rd party modules

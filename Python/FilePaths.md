@@ -13,4 +13,5 @@
     
     
     os.chdir('<file path>')                                     # Add a working directory
+    os.path.abspath(__file__);                                  # Move Spyder path to this files directory    
 

@@ -4,31 +4,31 @@
     
 ## Check if .txt file exists, if it does not then create and empty file
 
-    file = '<filename.txt>';
+    filename = '<filename.txt>';
 
-    if not os.path.exists(file):
-        f=open(file,"w+")
-        f.close()
-        
-## Read .txt file:
-
-    txt_con = open(file,"r")
-    file=txt_con.read()
-    txt_con.close()
-
+    if not os.path.exists(filename):
+        file=open(filename,"w+");
+        file.close();
     
 ## Overwrite .txt file
 
-    text = 'sometext'
+    text = '<insert some text>'
 
-    txt_con= open(file,"w")
-    txt_con.write(text)
-    txt_con.close()
+    file= open(filename,"w");
+    file.write(text);
+    file.close();
     
 ## Append .txt file without going to a new line (add \n if you want to)
 
-    text = 'This is new text and wont go to a new line'
+    text = '\nThis is new text and wont go to a new line'
 
-    txt_con= open(file,"a+")
-    txt_con.write(text)
-    txt_con.close()
+    file= open(filename,"a+");
+    file.write(text);
+    file.close();
+
+
+## Read .txt file:
+
+    file = open(filename,"r");
+    txt_cont=file.read();
+    file.close();

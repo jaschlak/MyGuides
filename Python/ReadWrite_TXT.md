@@ -7,7 +7,7 @@
     filename = '<filename.txt>';
 
     if not os.path.exists(filename):
-        file=open(filename,"w+");
+        file=open(filename,"w");
         file.close();
     
 ## Overwrite .txt file
@@ -27,8 +27,29 @@
     file.close();
 
 
-## Read .txt file:
+## Read entire .txt file:
 
     file = open(filename,"r");
     txt_cont=file.read();
     file.close();
+    
+## Read linebyline from .txt file:
+
+    file = open(filename,"r");
+    text_cont = file.readline();
+    file.close;
+    
+## Read entire file linebyline from .txt
+    
+    file = open(filename,"r");
+    
+    line =  file.readline();
+    cnt = 1;
+    
+    while line:
+        print(line.strip());
+        line = file.readline();
+        cnt +=1;
+
+    file.close;
+    

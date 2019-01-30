@@ -10,6 +10,7 @@
     sys.path.insert(0, path)                                    # insert file path to the system
     print(sys.path)                                             # see current file paths
     sys.path.insert(0, path)                                    # remove file path
+    os.listdir('<path>')                                        # get list of files in directory
     
     
     os.chdir('<file path>')                                     # Add a working directory

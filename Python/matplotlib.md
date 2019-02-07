@@ -48,6 +48,9 @@
     axes.set_ylabel('ylabel');
     axes.set_title('This Graph');
 
+    axes.yaxis.set_ticks(np.arange(0,85,10))
+    
+    
     # Finished Graph
 
     #%% Add second graph to the figure
@@ -75,6 +78,14 @@
     fig, axes = plt.subplots(nrows = 1, ncols = 2);
 
     # Overlap issues occured, use: "plt.tight_layout();"
+    
+    '''
+    # Or pad sides yourself using:
+        fig.subplots_adjust(top=0.96)
+        fig.subplots_adjust(bottom=0.06)
+        fig.subplots_adjust(left=.2)
+        fig.subplots_adjust(right=.98)
+    '''
 
 
     #Using the fig, axes format, this enables you to use for loops to populate plots
@@ -123,6 +134,8 @@
     ax.set_title('Title');
     ax.set_xlabel('x label');
     ax.set_ylabel('y label');
+    
+    # ax.set_ylabel('abc', rotation=0, fontsize=20, labelpad=20) #More options
 
 
 

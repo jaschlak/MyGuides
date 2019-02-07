@@ -7,3 +7,5 @@
     CREATE UNIQUE CLUSTERED INDEX <index name>
     ON dbo.<tablename>(<key if applicable>)
     WITH (DROP_EXISTING=ON,ONLINE=ON) ON <New File Group>
+    
+    NOTE: sometimes ONLINE needs to be off

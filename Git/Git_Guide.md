@@ -31,6 +31,7 @@
     git branch <branch name>                                        # Creates branch name
     git checkout <branch name>                                      # Moves to new branch
     git checkout -b <branch name>                                   # Creates branch and moves you to branch
+    git push <local branch>:<remote branch>                         # Push to branch with different remote name
                                                                     
                                                                     
 ## Versioning                                                       

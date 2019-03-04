@@ -132,8 +132,11 @@
     
 # Index  Information/Manipulation
 
-    ## Reset DataFrame numerical index
+    ## Reset DataFrame numerical index (keep old)
         df.reset_index(inplace = True)
+
+        ## Reset DataFrame numerical index (don't keep old)
+        df.reindex()
 
 
     ## Quick way to make a list for new indexing

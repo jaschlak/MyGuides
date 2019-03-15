@@ -132,11 +132,16 @@
     
 # Index  Information/Manipulation
 
+    ## Report DataFrame without index
+        df.to_string(index = False)
+
     ## Reset DataFrame numerical index (keep old)
         df.reset_index(inplace = True)
 
         ## Reset DataFrame numerical index (don't keep old)
         df.reindex()
+        or 
+        df.reset_index(drop = True,inplace = True)
 
 
     ## Quick way to make a list for new indexing

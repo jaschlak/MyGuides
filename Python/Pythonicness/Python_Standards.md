@@ -5,11 +5,11 @@
     
 ## PEP8 Basic Syntax
 
-Variable names
-  * lowercase_with_underscores
 Class names
   * CapWords style
 Functions
+  * lowercase_with_underscores
+Variable names
   * lowercase_with_underscores
 Constants
   * CAPS_WITH_UNDERSCORES

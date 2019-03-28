@@ -1,6 +1,7 @@
 # Python Strategy Reminders
 
     A few things to remember when programming in Python
+    https://www.python.org/dev/peps/pep-0008/
     
 ## PEP8 Basic Syntax
 

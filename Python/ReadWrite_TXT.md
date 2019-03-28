@@ -53,3 +53,7 @@
 
     file.close;
     
+## Read entire txt document as DataFrame
+
+    df = pd.read_fwf(path, widths = [1000])                     # widths is a list of how long you want each column to be, this example makes a single column
+    

@@ -321,6 +321,10 @@
         df = pd.read_csv('filename.csv')
         or
         df.to_csv('my_output', index = False)           # Doesn't save index as a column, saves numerical index instead
+        
+    ## Read entire txt document as DataFrame
+
+        df = pd.read_fwf(path, widths = [1000])                     # widths is a list of how long you want each column to be, this example makes a single column
      
     ## Import Excel Sheet to DataFrame
     

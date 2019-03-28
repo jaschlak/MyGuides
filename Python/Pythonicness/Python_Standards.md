@@ -20,6 +20,8 @@ Constants
 Clashing Variables with python keywords (I.E. 'for', 'open')
   * trailingunderscore_
 
+  
+  
 notes: 
   * use whitespace between operators (this = that + other)
   * don't include whitespace on the inside of brackets

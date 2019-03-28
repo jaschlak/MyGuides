@@ -7,12 +7,16 @@
 
 Class names
   * CapWords style
+  
 Functions
   * lowercase_with_underscores
+  
 Variable names
   * lowercase_with_underscores
+  
 Constants
   * CAPS_WITH_UNDERSCORES
+  
 Clashing Variables with python keywords (I.E. 'for', 'open')
   * trailingunderscore_
 

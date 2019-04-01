@@ -104,6 +104,10 @@
 
         df[(cond1) & (cond2)]
         df[(cond1) | (cond2)]
+        
+    ## Filter by REGEX
+    
+        df_new = df[df['<column name>'].str.contains('<regex pattern>')]
     
 # Dealing with Null values
 
@@ -285,6 +289,7 @@
         or
         df[(cond1) & (cond2)].apply(len)
         
+
 # Sorting and Ordering
 
     ## Sorting by column

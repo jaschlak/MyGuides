@@ -57,7 +57,14 @@
     git merge                                                       
                                                                     
     git reflog                                                      # See historical changes that you can rebase on
-    git reset --hard HEAD@{<insert head number>}                    # Rebase on that head               
+    git reset --hard HEAD@{<insert head number>}                    # Rebase on that head       
+
+
+## Stashing: https://git-scm.com/book/en/v1/Git-Tools-Stashing
+
+    git stash list                                                  # See list of stashes performed
+    git stash apply stash@{0}                                       # Applies the first stash from the historical list
+    git stash show -p stash@{0} | git apply -R                      # Re-Stashes the changes
                                                                     
                                                                     
 ## Pull and overwrite local changes                                 

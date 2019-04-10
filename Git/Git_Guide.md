@@ -14,7 +14,7 @@
     git init                                                        # set git workspace here
     git clone "<insert url>"                                        # clone a repository 
                                                                     
-## New Install Workflow                                             
+## Normal Workflow                                             
                                                                     
     git pull origin master                                          # pull and merge remote repo with local
     git add .                                                       # add current workspace to repository

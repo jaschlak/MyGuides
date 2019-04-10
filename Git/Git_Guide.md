@@ -58,6 +58,13 @@
                                                                     
     git reflog                                                      # See historical changes that you can rebase on
     git reset --hard HEAD@{<insert head number>}                    # Rebase on that head       
+    
+    
+## Invalid Password
+
+    Control Panel -> Credential Manager -> Click Window Credentials
+    In Generic Credential section ,there would be git url, update username and password
+    Restart Git Bash and try for clone
 
 
 ## Stashing: https://git-scm.com/book/en/v1/Git-Tools-Stashing

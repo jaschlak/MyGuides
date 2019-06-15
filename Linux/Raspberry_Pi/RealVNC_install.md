@@ -21,3 +21,11 @@
 ## More documentaiton
 
     https://www.realvnc.com/en/connect/docs/unix-start-stop.html
+    
+## Get ssh working Ubunut Mate 18.04 Raspberry Pi
+
+    keys not generated use the following:
+    sudo dpkg-reconfigure openssh-server
+    
+    login using this method:
+    ssh jstar@motionpi

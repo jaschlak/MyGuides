@@ -22,3 +22,9 @@
                         ,'CHECKPOINT SLEEP'
                         ,'RA MANAGER')
     order by batch_duration desc
+    
+    
+## Method 2 gives database names
+
+    SELECT COUNT(*) num_connections,db_name(dbid) [db_name], loginame FROM sys.sysprocesses
+    GROUP BY db_name(dbid),loginame

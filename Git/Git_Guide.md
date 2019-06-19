@@ -43,7 +43,14 @@
                                                                     
     git reset --hard <remote name>/<branch name>                    # Resets branch to original position
     git clean -f -d                                                 # Cleans up branch, especially helpful after a reset
-                                                                    
+    
+## Make a new branch with current configuration
+
+    git branch <newfeature>                                         # Create a new branch
+
+    git checkout <newfeature>                                       # Checkout new branch (this will not reset your work.)
+
+    git commit -s                                                   # Commit your work on this new branch                                                
                                                                     
 ## Troubleshooting                                                  
                                                                     

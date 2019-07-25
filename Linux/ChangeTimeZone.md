@@ -12,4 +12,5 @@
 ### More Resources
 
     https://www.wikihow.com/Change-the-Timezone-in-Linux
+    https://vitux.com/how-to-change-the-timezone-on-your-ubuntu-system/
     

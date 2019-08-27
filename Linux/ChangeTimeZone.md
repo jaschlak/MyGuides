@@ -10,7 +10,7 @@
     'FreeBSD and Slackware -    tzselect
     
     sudo unlink /etc/localtime                                              # Unlink time with current time zone
-    sudo ln -s /usr/share/zoneinfo/America/Chicago /etc/localtime           # Change timezone association to chicago in america
+    sudo ln -s /usr/share/zoneinfo/America/Chicago /etc/localtime           # Add symbolic link between zoneinfo file and localtime file
     date                                                                    # Check date change took effect
     
 ### More Resources

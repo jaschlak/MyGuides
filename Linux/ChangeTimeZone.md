@@ -9,6 +9,10 @@
     CentOS and Fedora -         system-config-date
     'FreeBSD and Slackware -    tzselect
     
+    sudo unlink /etc/localtime                                              # Unlink time with current time zone
+    sudo ln -s /usr/share/zoneinfo/America/Chicago /etc/localtime           # Change timezone association to chicago in america
+    date                                                                    # Check date change took effect
+    
 ### More Resources
 
     https://www.wikihow.com/Change-the-Timezone-in-Linux

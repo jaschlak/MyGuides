@@ -2,7 +2,22 @@
 
     This will help find what your table is connected to
     
-## Code:
+## Simplified Query:
+
+    DECLARE @item varchar(100) = '<insert table name>'
+
+    SELECT KP.TABLE_NAME PK_Table
+    , KP.COLUMN_NAME PK_Column
+    , KF.TABLE_NAME FK_Table
+    , KF.COLUMN_NAME FK_Column
+    FROM INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS RC
+    JOIN INFORMATION_SCHEMA.KEY_COLUMN_USAGE KF ON RC.CONSTRAINT_NAME = KF.CONSTRAINT_NAME
+    JOIN INFORMATION_SCHEMA.KEY_COLUMN_USAGE KP ON RC.UNIQUE_CONSTRAINT_NAME = KP.CONSTRAINT_NAME
+
+    WHERE KP.TABLE_NAME = @item
+    OR KF.TABLE_NAME = @item
+    
+## Query:
 
     DECLARE @item varchar(100) = '<insert table name>'
 

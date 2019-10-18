@@ -96,6 +96,14 @@
     git commit --amend -m "<input new message>"                     # ammends the new changes and comment to the old commit to the local repo
     git push --force <remote name> <branch name>                    # Overwrites the old commit with the new one on the remote repo
     
+## Squash commits (Keep changes from all commits, submits single commit)
+
+    git log                                                         # Find hash of the commit you want
+    git rebase -i [<hash of earliest commit you want to keep>]      # opens todo list for you to checkout
+    pick <Earliest commit to keep>
+    s <all commits you want to squash>
+    git commit --ammend -m "<summary of all commits>"               # Should only be one commit with your new summary as a description
+    
     
 ## graphing branch history (a few different options
 

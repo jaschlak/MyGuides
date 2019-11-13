@@ -20,6 +20,6 @@
 
     powershell.exe (<source filepath> gc hibernate.properties) -replace '<original string>', '<replacement string>' | powershell.exe Set-Content <destination filepath>
     
-## Replace part of a file with Regex (note the space after $2 needs to be dealt with at some point)
+## Replace part of a file with Regex
 
-    powershell.exe (powershell.exe gc <source filepath>) -replace '(<regex to keep>)<regex to replace>(regex2 to keep)<regex to delete>', '$1<replacement string>$2 <replacement string>' | powershell.exe Set-Content <output filepath>
+    powershell.exe (powershell.exe gc <source filepath>) -replace '(<regex to keep>)<regex to replace>(regex2 to keep)<regex to delete>', '${1}<replacement string>${2}<replacement string>' | powershell.exe Set-Content <output filepath>

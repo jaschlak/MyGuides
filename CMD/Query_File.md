@@ -15,3 +15,7 @@
 ## See number of lines that contain a select word within file
 
     powershell.exe get-content <filepath> | find "<string to find>" /c
+    
+## Replace Part of a file
+
+    powershell.exe (<source filepath> gc hibernate.properties) -replace '<original string>', '<replacement string>' | powershell.exe Set-Content <destination filepath>

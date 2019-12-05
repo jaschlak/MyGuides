@@ -4,54 +4,54 @@
     
 ## Check if .txt file exists, if it does not then create and empty file
 
-    filename = '<filename.txt>';
+    filename = '<filename.txt>'
 
     if not os.path.exists(filename):
-        file=open(filename,"w");
-        file.close();
+        file=open(filename,"w")
+        file.close()
     
 ## Overwrite .txt file
 
     text = '<insert some text>'
 
-    file= open(filename,"w");
-    file.write(text);
-    file.close();
+    file= open(filename,"w")
+    file.write(text)
+    file.close()
     
 ## Append .txt file without going to a new line (add \n if you want to)
 
     text = '\nThis is new text and wont go to a new line'
 
-    file= open(filename,"a+");
-    file.write(text);
-    file.close();
+    file= open(filename,"a+")
+    file.write(text)
+    file.close()
 
 
 ## Read entire .txt file:
 
-    file = open(filename,"r");
-    txt_cont=file.read();
-    file.close();
+    file = open(filename,"r")
+    txt_cont=file.read()
+    file.close()
     
 ## Read linebyline from .txt file:
 
-    file = open(filename,"r");
-    text_cont = file.readline();
-    file.close;
+    file = open(filename,"r")
+    text_cont = file.readline()
+    file.close
     
 ## Read entire file linebyline from .txt
     
-    file = open(filename,"r");
+    file = open(filename,"r")
     
-    line =  file.readline();
-    cnt = 1;
+    line =  file.readline()
+    cnt = 1
     
     while line:
-        print(line.strip());
-        line = file.readline();
-        cnt +=1;
+        print(line.strip())
+        line = file.readline()
+        cnt +=1
 
-    file.close;
+    file.close
     
 ## Read entire txt document as DataFrame
 

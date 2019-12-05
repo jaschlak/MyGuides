@@ -19,3 +19,8 @@
     
     @echo off
     FOR /F "tokens=*" %%A IN (<path>\filelist.txt) DO COPY %%A ..\Entre\logfiles\%%A
+
+## Example run file 20 times
+
+    for /L %i in (1,1,20) do @<process name>
+    for /L %i in (1,1,20) do @notepad.exe

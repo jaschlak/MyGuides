@@ -57,3 +57,11 @@
     setuid
     setgid
     sticky
+    
+## Find only files recursively that belong to a certain user or group
+
+    find <path> -user <user> -group <group>
+    
+## pipe commands
+
+    <command 1> -exec <command 2> {} \;

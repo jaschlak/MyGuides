@@ -6,7 +6,7 @@
 
     find <path> -name <pattern>
     find <path> iname <pattern>                         # ignores case
-    find <path>-ls                                      # does ls on returned paths
+    find <path> -ls                                      # does ls on returned paths
     find -mtime <time delta>                            # finds files within modification age specified
     find <path> size <num>                              # finds files within size
     find <path> -newer <file>                           # finds files newer than specified file
@@ -16,4 +16,3 @@
 
     locate <pattern>
 
-    

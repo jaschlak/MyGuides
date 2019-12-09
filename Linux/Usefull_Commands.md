@@ -6,6 +6,10 @@
 
     echo $Path
     
+## Don't display "Permission Denied" or other errors
+
+    <command> -print 2>/dev/null
+    
 ## Path to aliased commands
     
     which <command>
@@ -18,7 +22,7 @@
     man <command>
     man -k <search term>                                    # not sure which command you are looking for
     
-## find params
+## find params (works on search)
 
     find <path> -name <pattern>
     find <path> iname <pattern>                        # ignores case

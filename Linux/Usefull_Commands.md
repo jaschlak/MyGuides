@@ -82,4 +82,11 @@
     https://www.tecmint.com/ps-command-examples-for-linux-process-monitoring/ #More commangs
     
     
+## rot13 alias
+
+    alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
+    echo '<enter text here>' | rot13
+    
+    
+    
     

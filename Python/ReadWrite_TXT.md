@@ -29,9 +29,13 @@
 
 ## Read entire .txt file:
 
-    file = open(filename,"r")
-    txt_cont=file.read()
-    file.close()
+    def read_file_entire(filename):
+        
+        file = open(filename,"r")
+        txt_cont=file.read()
+        file.close()
+        
+        return txt_cont
     
 ## Read linebyline from .txt file:
 

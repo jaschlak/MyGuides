@@ -10,8 +10,8 @@
 ## Add to PATH
 
     set PATH=%PATH%;C:\Program Files (x86)\Notepad++                # Temperary for session
-    setx path "%PATH%;C:\Program Files (x86)\Notepad++  "           # Permanent for user
-    setx /M path "%PATH%;C:\Program Files (x86)\Notepad++  "        # Permanent for all users
+    setx path "%PATH%;C:\Program Files (x86)\Notepad++"             # Permanent for user
+    setx /M path "%PATH%;C:\Program Files (x86)\Notepad++"          # Permanent for all users
     
 ## Backup current PATH directories
 
@@ -21,4 +21,4 @@
     
 ## Alias
 
-    doskey np=notepad++.exe $*
+    doskey npp=notepad++.exe $*

@@ -17,6 +17,10 @@
         
     ## Create dataframe from lists
     
+        df = pd.DataFrame(list(zip(<list1>, <list2>, <list3>)), columns = ['<title1>','<title2>'','<title3>''])
+        
+    ## Create dataframe from dictionary/list
+    
         df = pd.DataFrame.from_dict({'<list name>':<list variable>, '<list 2 name>':<list 2 variable>});
 
     ## Select a column from a DataFrame

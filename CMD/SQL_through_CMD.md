@@ -41,7 +41,20 @@
 
     https://docs.microsoft.com/en-us/sql/ssms/scripting/sqlcmd-connect-to-the-database-engine?view=sql-server-2017
     
+## Params
+
+    /S = the servername/instance name. Example: Pete's Laptop/SQLSERV
+    /d = the database name. Example: Botlek1
+    -E = Windows authentication.
+    -U = SQL Server authentication/user. Example: Pete
+    -P = password that belongs to the user. Example: 1234
+    
 ## Run Query
     
     Open CMD, navigate to .sql file and run
     sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt
+    
+    or 
+    
+    sqlcmd -S <SQL ip/domain> /d <database name> -U <username> -P <password> -i <path to sql command file> -o <path to output>
+    

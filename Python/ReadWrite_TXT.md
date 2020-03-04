@@ -29,9 +29,13 @@
 
 ## Read entire .txt file:
 
-    file = open(filename,"r")
-    txt_cont=file.read()
-    file.close()
+    def read_file_entire(filename):
+        
+        file = open(filename,"r")
+        txt_cont=file.read()
+        file.close()
+        
+        return txt_cont
     
 ## Read linebyline from .txt file:
 
@@ -41,17 +45,19 @@
     
 ## Read entire file linebyline from .txt
     
-    file = open(filename,"r")
-    
-    line =  file.readline()
-    cnt = 1
-    
-    while line:
-        print(line.strip())
-        line = file.readline()
-        cnt +=1
-
-    file.close
+    def read_file_linexline(filename):
+        
+        file = open(filename,"r")
+        
+        line =  file.readline()
+        cnt = 1
+        
+        while line:
+            print(line.strip())
+            line = file.readline()
+            cnt +=1
+        
+        file.close
     
 ## Read entire txt document as DataFrame
 

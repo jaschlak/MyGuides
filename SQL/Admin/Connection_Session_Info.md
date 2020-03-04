@@ -15,10 +15,10 @@
     SELECT      *
     FROM        #sp_who2
     -- Add any filtering of the results here :
-    --WHERE       Login = 'jschlak'
+    --WHERE       Login = '<userinput>'
     -- Add any sorting of the results here :
-    WHERE DBName = 'vxdb_850f_AOB'
-    --AND HOSTNAME = 'NOCAPPSERVER '
+    WHERE DBName = '<userinput>'
+    --AND HOSTNAME = '<userinput>'
     ORDER BY    CPUTime DESC
      
     DROP TABLE #sp_who2

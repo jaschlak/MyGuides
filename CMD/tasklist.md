@@ -23,7 +23,7 @@
     
 ## further filtering
 
-    tasklist /fi "imagename eq <process name"
+    tasklist /fi "imagename eq <process name>"
     tasklist /fi "memusage gt 500000" /fo table"                                    # tasks that are using more than 500MB of RAM
     tasklist /fi "pid eq <insert pid>"
     

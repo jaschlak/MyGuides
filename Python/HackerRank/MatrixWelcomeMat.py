@@ -3,8 +3,8 @@
 #n = int(input())
 #m = int(input())
 
-n=7
-m=21
+n=25
+m=71
 
 
 graphic1 = '.|.'

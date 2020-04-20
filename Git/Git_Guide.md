@@ -57,7 +57,7 @@
     git push origin master --force                                  # sometimes you need to force 
                                                                     the push (I.E. changed local repo location)
     git remote -v                                                   # see where the remote origin is pointing
-    git -rf .git                                                    # uninitiate local .git file
+    git -rf .git                                                    # delete local .git file
     git merge --abort                                               # abort merge    
                                                                     
     git fetch                                                       # Use these two lines if you run into trouble with committing before pulling

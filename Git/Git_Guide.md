@@ -72,7 +72,6 @@
     Control Panel -> Credential Manager -> Click Window Credentials
     In Generic Credential section ,there would be git url, update username and password
     Restart Git Bash and try for clone
-    wtf mate?
 
 
 ## Stashing: https://git-scm.com/book/en/v1/Git-Tools-Stashing

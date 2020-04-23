@@ -29,7 +29,8 @@
        DiskIO INT NULL,  
        LastBatch VARCHAR(1000) NULL,  
        ProgramName VARCHAR(1000) NULL,  
-       SPID2 INT
+       SPID2 INT NULL,
+       REQUESTID INT NULL
     ) 
     GO
 
@@ -39,7 +40,7 @@
 
     SELECT *
     FROM #sp_who2
-    WHERE Login = 'bla'
+    WHERE BlkBy != '  .'
     GO
 
-    DROP
+    DROP TABLE #sp_who2

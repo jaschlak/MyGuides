@@ -70,3 +70,10 @@ unique_cons = unique(word_cons)
 
 print(unique_vowl)
 print(unique_cons)
+
+for 
+
+
+
+
+

@@ -6,3 +6,7 @@
 ## Command:
 
     @echo off & for /R "<insert folder path>" %A in (*.*) do echo %~fA %~zA >> test.txt
+    
+## Keep in mind echo is now off, turn it back on with
+
+    @echo ON

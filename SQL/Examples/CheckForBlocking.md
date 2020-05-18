@@ -2,6 +2,10 @@
 
     These help you check for blocking accross DB's
     
+## Check for blocking accross server
+    SELECT * FROM sys.sysprocesses
+    WHERE blocked > 0
+    
 ## Only check for blocking
     USE Master 
     GO

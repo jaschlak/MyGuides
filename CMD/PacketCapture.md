@@ -1,6 +1,6 @@
 # PacketCapture
 
-    This will run a packet capture from command prompt, probably not too useful since Wireshark will sniff and analyze while this only sniffs. Furthermore it creates a .etl and you can convert to .txt but you still need the Microsoft Analyzer (Windows Performance Analyzer) or convert with a 3rd party program (ETL2PCAPNG). Either way if you can't use wireshark they probably don't want you packet analyzers running and wont allow installation of these programs
+    This will run a packet capture from command prompt, probably not too useful since Wireshark will sniff and analyze while this only sniffs. Furthermore it creates a .etl and you can convert to .txt but you still need the Microsoft Analyzer (Windows Performance Analyzer) or convert with a 3rd party program (ETL2PCAPNG). Either way, if wireshark is not allowed, this is probably not allowed.
     
 ## Add prefilter 
 

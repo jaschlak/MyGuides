@@ -18,3 +18,9 @@
 ## Example
     # Kill Chrome Every Minute
     SCHTASKS /CREATE /SC MINUTE /TN "LogOffYourComputer" /TR "taskkill /IM chrome.exe /F"
+    
+    # Query for the task
+    SCHTASKS /QUERY | findstr "LogOffYourComputer"
+    
+    # Delete the task
+    SCHTASKS /DELETE /TN "LogOffYourComputer"

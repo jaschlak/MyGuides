@@ -14,3 +14,7 @@
     
     #Creates a scheduled task "report" on remote machine "ABC" to run notepad.exe every week.
     SCHTASKS /Create /S <remote server> /U <executor user> /P <executor password> /RU <remote user> /RP <remote password> /SC <scheduled process name> /TN <name of task> /TR "<command or path to batch>" /ST <Time>
+    
+## Example
+    # Kill Chrome Every Minute
+    SCHTASKS /CREATE /SC MINUTE /TN "LogOffYourComputer" /TR "taskkill /IM chrome.exe /F"

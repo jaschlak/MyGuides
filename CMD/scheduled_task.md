@@ -1,4 +1,4 @@
-# Schedulted Task
+# Scheduled Task
 
     This will create a scheduled task similar to a CRON job
     

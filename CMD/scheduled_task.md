@@ -10,4 +10,7 @@
 ## Open cmd
     
     #/SC (DAILY), /TN (Name of this process), /ST (HH:MM)
-    SCHTASKS /CREATE /SC <frequency> /TN "<your scheduled process name>" /TR "<command or path to batch>" /ST <Time>
+    SCHTASKS /CREATE /SC <frequency> /TN "<scheduled process name>" /TR "<command or path to batch>" /ST <Time>
+    
+    #Creates a scheduled task "report" on remote machine "ABC" to run notepad.exe every week.
+    SCHTASKS /Create /S <remote server> /U <executor user> /P <executor password> /RU <remote user> /RP <remote password> /SC <scheduled process name> /TN <name of task> /TR "<command or path to batch>" /ST <Time>

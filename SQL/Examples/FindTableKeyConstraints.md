@@ -19,7 +19,7 @@
  
 ## Simplified Query by foreign key name:
  
-    DECLARE @item varchar(100) = 'FK5ED85007987004B' 
+    DECLARE @item varchar(100) = '<insert foreign key name>' 
 
     SELECT RC.CONSTRAINT_NAME FK_Name
     , KF.TABLE_SCHEMA FK_Schema

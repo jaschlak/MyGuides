@@ -2,7 +2,7 @@
 
     This will help find what your table is connected to
     
-## Simplified Query:
+## Simplified Query by table name:
 
     DECLARE @item varchar(100) = '<insert table name>'
 
@@ -16,6 +16,27 @@
 
     WHERE KP.TABLE_NAME = @item
     OR KF.TABLE_NAME = @item
+ 
+## Simplified Query by foreign key name:
+ 
+    DECLARE @item varchar(100) = 'FK5ED85007987004B' 
+
+    SELECT RC.CONSTRAINT_NAME FK_Name
+    , KF.TABLE_SCHEMA FK_Schema
+    , KF.TABLE_NAME FK_Table
+    , KF.COLUMN_NAME FK_Column
+    , RC.UNIQUE_CONSTRAINT_NAME PK_Name
+    , KP.TABLE_SCHEMA PK_Schema
+    , KP.TABLE_NAME PK_Table
+    , KP.COLUMN_NAME PK_Column
+    , RC.MATCH_OPTION MatchOption
+    , RC.UPDATE_RULE UpdateRule
+    , RC.DELETE_RULE DeleteRule
+    FROM INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS RC
+    JOIN INFORMATION_SCHEMA.KEY_COLUMN_USAGE KF ON RC.CONSTRAINT_NAME = KF.CONSTRAINT_NAME
+    JOIN INFORMATION_SCHEMA.KEY_COLUMN_USAGE KP ON RC.UNIQUE_CONSTRAINT_NAME = KP.CONSTRAINT_NAME
+
+    WHERE RC.CONSTRAINT_NAME = @item
     
 ## Query:
 

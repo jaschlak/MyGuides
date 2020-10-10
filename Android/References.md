@@ -8,3 +8,5 @@
                                                     https://www.gsmarena.com/lg_g7_thinq-9115.php
                                                     
     Screen Specs                                    https://developer.android.com/guide/practices/screens_support
+    
+    Start guid                                      https://developer.android.com/guide

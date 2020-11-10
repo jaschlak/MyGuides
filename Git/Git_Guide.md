@@ -21,10 +21,7 @@
     git status                                                      # doublecheck this is what you expected
     git commit -m "<insert message about what you added>"           # commits changes, preparing to add to repo
     git push origin master                                          # pushes changes to repo
-                                                                    
-                                                                    
-                                                                    
-                                                                    
+                                                                                                                                                                              
 ## Branching                                                        
                                                                     
     git clone -b <branch name> --single-branch <repo url>           # Clones branch of repo to this path
@@ -33,7 +30,11 @@
     git checkout -b <branch name>                                   # Creates branch and moves you to branch
     git push <repo name> <local branch>:<remote branch>             # Push to branch with different remote name
     git pull <repo name> <local branch>:<remote branch>             # Pull from different remote branch
-                                                                    
+         
+## Skip Tracking
+
+    add a .gitignore to your root folder (or anywhere)
+    git rm -r --cached <file or folder name>                        # delete from cached memory, clearing it from the repo upon push
                                                                     
 ## Versioning                                                       
     git log                                                         # See commit history

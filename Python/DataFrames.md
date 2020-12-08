@@ -371,6 +371,43 @@
     
         sqldf = pd.read_sql('my_table', con = engint)
         
+    ## Full script sql -> df
+    
+        import pandas as pd
+        import sqlalchemy
+
+
+        class SQL:
+            
+            def __init__(self):
+                
+                self.ip = '<sql_ip>'
+                self.username = '<username>'
+                self.password = '<password>'
+                self.dbname = '<db_name>'
+                self.port = '<port>'
+                
+                self.engine_string = ''.join(['mssql+pymssql://', self.username, ':', self.password,
+                                  '@', self.ip, ':', self.port, '/', self.dbname])
+                
+                self.engine = sqlalchemy.create_engine(self.engine_string)
+                
+                self.statement = "select_statement"
+                
+            
+            def run_query(self):
+
+                return pd.read_sql_query(self.statement, self.engine)
+            
+            def sql_to_df():
+                SQL_obj = SQL()
+                return SQL.run_query(SQL_obj)
+
+        #df = pd.read_sql_query(statement, engine)
+        if __name__ == '__main__':
+            
+            df = SQL.run_query()
+        
         
     
 

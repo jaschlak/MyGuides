@@ -4,10 +4,8 @@
     
 ## Python Code:
 
-
-    # This is using data that can be found at:
+    # tutorial from:
     # https://www.kaggle.com/ahmedatta/who-said-data-science-is-boring/data?select=kaggle_survey_2020_responses.csv
-
 
     import pandas as pd
     import numpy as np
@@ -19,7 +17,9 @@
 
     # %%
 
-    df =pd.read_csv('input/kaggle_survey_2020_responses.csv')
+    input_file = 'input/kaggle_survey_2020_responses.csv'
+
+    df =pd.read_csv(input_file)
 
     # %%
 
@@ -157,7 +157,7 @@
     world_map.save("output/countries.html")
 
     import webbrowser
-    webbrowser.open('C:\devel\Python\DontMatter\Kaggle\output/countries.html'.replace('\\','/'))
+    webbrowser.open(os.path.realpath("output/countries.html"))
 
     # %% Education Background
 

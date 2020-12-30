@@ -1,6 +1,7 @@
 #Get started with razor pages
 
-	Setup Razor Pages in VS Code
+	setup Razor Pages in VS Code
+	more info at https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-5.0&tabs=visual-studio-code
 	
 ## Prerequisites
 
@@ -14,6 +15,10 @@
 	open terminal and type the following commands:
 	dotnet new webapp -o <project name>
 	code -r <project name>
+	
+## trust the cert
+
+	dotnet dev-certs https --trust
 	
 ## run page locally
 

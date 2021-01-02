@@ -54,6 +54,7 @@
         
     Send SMS
     AT+CMGS="+4912223334444
+    AT+CMGS="+<phone number>"
     CTRL_Z=\x1A
     
 ## Normal Cell Conversation

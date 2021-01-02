@@ -8,6 +8,9 @@
 	Microsoft.EntityFrameworkCore
 	Microsoft.EntityFrameworkCore.tools
 	Microsoft.EntityFrameworkCore.<sql_variant>
+    
+    #ef
+    dotnet tool install --global dotnet-ef
 	
 	Create:
 	### context

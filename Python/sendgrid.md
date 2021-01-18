@@ -33,3 +33,61 @@ try:
     print(response.headers)
 except Exception as e:
     print(e)
+    
+    
+## Sample Code (template variables):
+
+
+Sendgrid example including template variables:
+
+    
+    #!/usr/bin/env python3
+    import os
+    from sendgrid.helpers.mail import Mail
+    from sendgrid import SendGridAPIClient
+
+    # from address we pass to our Mail object, edit with your name
+    FROM_EMAIL = '<from@example.com>'
+
+    # update to your dynamic template id from the UI
+    TEMPLATE_ID = 'd-<sendgrid_template_id>'                                # links e-mail to template made in sendgrid dynamic templates (subject, place, event)
+
+    # list of emails and preheader names, update with yours
+    TO_EMAILS = [('<to@example.com>', '<to_name>')
+                 # add more e-mails if you want,
+                 # ('<your_email+1@domain.com>', '<to_name>')
+                 ]
+
+
+    def SendDynamic():
+        """ Send a dynamic email to a list of email addresses
+
+        :returns API response code
+        :raises Exception e: raises an exception """
+        # create Mail object and populate
+        message = Mail(
+            from_email=FROM_EMAIL,
+            to_emails=TO_EMAILS)
+        # pass custom values for our HTML placeholders
+        message.dynamic_template_data = {
+            'subject': 'SendGrid Development',                              # sendgrid example variables and values
+            'place': 'New York City',
+            'event': 'Twilio Signal'
+        }
+        message.template_id = TEMPLATE_ID
+        # create our sendgrid client object, pass it our key, then send and return our response objects
+        try:
+            sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))      # sendgrid api saved as environmental variable    
+            response = sg.send(message)
+            code, body, headers = response.status_code, response.body, response.headers
+            print("Response Code: {0} ".format(code))
+            print("Response Body: {0} ".format(body))
+            print("Response Headers: {0} ".format(headers))
+            print("Message Sent!")
+            return str(response.status_code)
+        except Exception as e:
+            print("Error: {0}".format(e))
+
+
+    if __name__ == "__main__":
+        SendDynamic()

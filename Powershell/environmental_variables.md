@@ -6,6 +6,14 @@
 
     $Env:<variableName> = <variableValue>
     
+## Create Environmental Variable for Machine
+
+    [System.Environment]::SetEnvironmentVariable(‘<variableName>’,’<variableValue>’,[System.EnvironmentVariableTarget]::Machine)
+    
+## Create Environmental Variable for user
+
+    [System.Environment]::SetEnvironmentVariable(‘<variableName>’,’<variableValue>’,[System.EnvironmentVariableTarget]::User)
+    
 ## Remove Environmental Variable
 
     Remove-Item Env:\<variableName>

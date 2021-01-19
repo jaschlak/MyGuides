@@ -35,6 +35,10 @@ except Exception as e:
     print(e)
     
     
+## Supreme example found on github:
+
+    https://github.com/sendgrid/sendgrid-python/blob/main/examples/helpers/mail_example.py
+    
 ## Sample Code (template variables):
 
 

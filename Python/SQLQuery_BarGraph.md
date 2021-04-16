@@ -17,11 +17,11 @@
 
     #%% Creating SQL connection to use
 
-    sqluser = 'entreuser';
-    sqlpass = '3ntr3';
-    ip = '10.3.3.118';
+    sqluser = os.getenv('user');
+    sqlpass = os.getenv('pass');
+    ip = '10.1.98.118';
     port = '1433';
-    dbname = 'vxdb_820';
+    dbname = '<db name>';
     sql_driver_name = 'SQL+Server'
 
     engine = SQL_commands.my_engine(sqluser, sqlpass, ip, port, dbname, sql_driver_name);

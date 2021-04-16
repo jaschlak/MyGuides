@@ -2,113 +2,113 @@
 
     Known run commands that have come in handy
     
-## Resource Monitor
+### Resource Monitor
 
     resmon
     
-## Windows Services
+#### Windows Services
 
     Services.msc
     
-## Event Viewer
+#### Event Viewer
 
     eventvwr.msc
     
-## Firewall
+#### Firewall
 
     firewall.cpl
     
-## Windows Optional Features (telnet)
+#### Windows Optional Features (telnet)
 
     optionalfeatures
     
-## Network Adapters
+#### Network Adapters
 
     ncpa.cpl
     
-## Control Panel
+#### Control Panel
 
     control
     
-## PowerShell
+#### PowerShell
 
     powershell 
     
-## Performance Monitor
+#### Performance Monitor
 
     perfmon
     
-## Programs And Features (Uninstall)
+#### Programs And Features (Uninstall)
 
     appwiz.cpl
     
-## System Configuration
+#### System Configuration
     
     msconfig
     
-## User Accounts
+#### User Accounts
 
     netplwiz
 
     control nusrmgr.cpl
 
-## Local Users and Groups
+#### Local Users and Groups
 
     lusrmgr.msc
     
-## Computer Management
+#### Computer Management
 
     compmgmt.msc
     
-## Remote Desktop
+#### Remote Desktop
 
     mstsc
     
-## C Drive
+#### C Drive
 
     \
     
-## Home Directory
+#### Home Directory
 
     .
     
-## All Users Directory
+#### All Users Directory
 
     ..
     
-## Power Configuration
+#### Power Configuration
 
     powercfg.cpl
     
-## System Info
+#### System Info
 
     msinfo32
     
-## Backup and Restore Windows
+#### Backup and Restore Windows
     
     sdclt
     
-## Windows Disk Cleanup Utility
+#### Windows Disk Cleanup Utility
 
     cleanmgr
     
-## Microsoft Management Console
+#### Microsoft Management Console
 
     mmc
     
-## Microsoft Malicious Software Removal Tool (Updated Monthly)
+#### Microsoft Malicious Software Removal Tool (Updated Monthly)
 
     mrt
     
-## Local Group Policy Editor
+#### Local Group Policy Editor
 
     gpedit.msc
     
-## System Properties
+#### System Properties
 
     sysdm.cpl
 
-## Calculator
+#### Calculator
 
     calc
     

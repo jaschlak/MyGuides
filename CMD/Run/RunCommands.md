@@ -2,9 +2,13 @@
 
     Known run commands that have come in handy
     
-### Resource Monitor
+#### Resource Monitor
 
     resmon
+    
+#### Environmental Variables
+
+    rundll32 sysdm.cpl,EditEnvironmentVariables
     
 #### Windows Services
 

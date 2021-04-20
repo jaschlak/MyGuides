@@ -12,7 +12,7 @@
     class LogClass:
         
         def __init__(self):
-            LOG_FILENAME = "Log/test_log.log"
+            LOG_FILENAME = "Log/test.log"
             logger = logging.getLogger()
             logger.setLevel(logging.DEBUG)
             

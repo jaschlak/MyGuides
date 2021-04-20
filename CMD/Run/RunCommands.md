@@ -116,5 +116,19 @@
 
     calc
     
+#### magnification
+
+    magnify
+    
+    # hotkeys (after opening magnifier)
+    
+    ctrl + alt + L                  # Lens View, size modifiable in settings
+    
+    ctrl + alt + F                  # Full Screen View
+    
+    ctrl + alt + D                  # Dock View, dock size modifiable box
+    
+    ctrl + alt + M                  # cycle through all views
+    
 
     

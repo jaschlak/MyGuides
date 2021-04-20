@@ -6,6 +6,8 @@
 
     import numpy as np                  # Needed for more advanced stuff
     import pandas as pd
+    pd.options.mode.chained_assignment = None  # get rid of copy of slice warning message, default='warn'
+    
     from numpy.random import randn
     
 ## Create and select data

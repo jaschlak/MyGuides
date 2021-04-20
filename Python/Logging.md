@@ -7,6 +7,7 @@
 
 
     import logging
+    from logging import handlers
 
     class LogClass:
         

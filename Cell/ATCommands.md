@@ -5,6 +5,13 @@
     Video Resource: https://www.youtube.com/watch?v=g1nxe_J3DVI
     Document Resource: https://support.emnify.com/hc/en-us/articles/360005408633-AT-Command-sequence-for-proper-network-connection-disconnection
     
+    More:
+    https://sixfab.com/wp-content/uploads/2018/10/Quectel_BG96_AT_Commands_Manual_V2.2.pdf
+    https://docs.sixfab.com/page/uart-configuration
+    https://docs.sixfab.com/docs/raspberry-pi-cellular-iot-hat-troubleshooting
+    
+    
+    
 ## Open a connection
 
     screen /dev/ttyS0 115200                            - open a screen to the tty Serial interface and set the baud rate

@@ -64,6 +64,10 @@
     AT+CMGS="+<phone number>"
     CTRL_Z=\x1A
     
+    ## switch to text mode/gsm
+    AT+CMGF=1
+    AT+CSCS="GSM"
+
 ## Normal Cell Conversation
 
     Attach (RAN - Radio Access Network)

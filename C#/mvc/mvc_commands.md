@@ -6,6 +6,7 @@
 ## Create MVC app
 
     dotnet new mvc -o <app_name>
+    dotnet new mvc -o <app_name> --framework <framework version>
     
 ## Open MVC in Visual Studio Code
 
@@ -50,7 +51,21 @@
 ## Initial Migration
 
     dotnet tool install --global dotnet-ef                                                      ## don't need unless jumped to this command
-    dotnet ef migrations add InitialCreate                                                      ## Creates Migration folder
+    dotnet ef migrations add <migration name>                                                   ## Creates Migration folder
+    dotnet ef migrations remove                                                                 ## remove migrations    
+    
     dotnet ef database update                                                                   ## Update database schema
+    dotnet ef database drop                                                                     ## drop db
+    
+    sqllocaldb start
+    sqllocaldb stop
+    sqllocaldb delete
+    
+## Scaffold migration from existing db
+
+    dotnet ef dbcontext scaffold
     
     
+    
+## troubleshooting durring 3.1 area install
+    dotnet tool install -g dotnet-aspnet-codegenerator

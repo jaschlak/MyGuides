@@ -5,7 +5,7 @@
 ## capture filters
 
     # filter to mac
-    eth.addr == xx:xx:xx:xx:xx:xx
+    ether host xx:xx:xx:xx:xx:xx
     
     # filter 2 way to address
     net <ip address>
@@ -21,6 +21,9 @@
     ip.dst == <ip address>
     tcp.port == <port number>
     udp.port == <port number>
+    
+    # search for mac
+    eth.addr == xx:xx:xx:xx:xx:xx
     
     # search for specific content
     data.data contains "<enter text>"

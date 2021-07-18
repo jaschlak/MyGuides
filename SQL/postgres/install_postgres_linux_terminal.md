@@ -25,7 +25,12 @@
     # validate connection info
     \conninfo
     
-## Commands to create new users
+
+    
+    
+    
+    
+## Commands to create new users (
 
     # Create new superuser
     sudo -u postgres createuser --superuser <username>  sudo -u postgres psql 

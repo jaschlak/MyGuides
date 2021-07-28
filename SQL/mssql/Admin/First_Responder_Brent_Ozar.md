@@ -20,12 +20,13 @@
     *Make sure you have created the DBName you are using
     *Saving Output adds ServerName and CheckDate (Unions results every time run)
     
+    ```
     sp_Blitz @CheckServerInfo = 1,
     @CheckUserDatabaseObjects = 1,
     @OutputDatabaseName = 'DBAtools',
     @OutputSchemaName = 'dbo',
     @OutputTableName = 'Blitz';
-    
+    ```
     
     
     #### Notes: 

@@ -14,7 +14,9 @@
 * checks entire servers general health
 
     ### Normal Use
+    ```
     sp_Blitz @CheckServerInfo = 1;
+    ```
     
     ### Save Output to it's own db/table
     *Make sure you have created the DBName you are using

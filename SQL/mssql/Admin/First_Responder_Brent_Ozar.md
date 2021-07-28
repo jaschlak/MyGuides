@@ -9,6 +9,10 @@
     or to get notes or even contribute
     https://firstresponderkit.org   (forwards to github repo)
     
+    optional getting started references provided on the site:
+    https://www.brentozar.com/archive/2015/10/how-to-download-the-stack-overflow-database-via-bittorrent/
+    https://www.brentozar.com/archive/2016/08/dell-dba-days-prep-using-stackexchange-queries-generate-workloads/
+    
 ## sp_blitz
 
 * checks entire servers general health

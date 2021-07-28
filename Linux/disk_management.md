@@ -145,3 +145,18 @@
     vgreduce <volume group name> <physical volume path>
     pvremove <physical volume path to remove>
     vgremove <volume group name>                            # can remove since not connected to physical volume
+    
+    
+## Disk Cleanup (logrotates)
+
+    --perform daily log rotation now
+    sudo logrotate -d /etc/logrotate.d
+
+    --find largest files/directories
+    sudo du -a / 2>/dev/null | sort -n -r | head -n 20
+
+    --clean journalctl down to 100MB
+    sudo journalctl --vacuum-size=100M
+
+    --Restart journald 
+    sudo systemctl restart systemd-journald.service

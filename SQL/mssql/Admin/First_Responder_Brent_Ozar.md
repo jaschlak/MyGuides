@@ -13,10 +13,10 @@
 
 * checks entire servers general health
 
-    # Normal Use
+    ### Normal Use
     sp_Blitz @CheckServerInfo = 1;
     
-    # Save Output to it's own db/table
+    ### Save Output to it's own db/table
     *Make sure you have created the DBName you are using
     *Saving Output adds ServerName and CheckDate (Unions results every time run)
     
@@ -28,7 +28,7 @@
     
     
     
-    # Notes: 
+    #### Notes: 
     * Priority Level 1-50 are important for possible data loss
     * If your application doesn't control users don't run CheckUserDatabaseObjects -> @CheckUserDatabaseObjects = 0;
     * Can add markdown print type with "@OutputType = 'markdown';"

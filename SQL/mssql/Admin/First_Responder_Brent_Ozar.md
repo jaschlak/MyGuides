@@ -48,11 +48,21 @@
 * if no problems found, that will be the second row of results
 * provides finding, url to educate you on the topic, and a possible fix (that still needs to be verified by a dba/human)
 
-    ### Normal Use
+    ### Normal Use (dif)
     * takes two snapshots on tempdb, 5 seconds apart and compares
     ```
     sp_BlitzFirst
     ```
+    
+    ### Top 10
+    * Gets the top 10 Waits
+    * Brent says he will analyze this if we send him a screenshot (from imgur), he will give feedback free
+    
+    ```
+    sp_BlitzFirst @SinceStartup = 1, @OutputType = 'Top10';
+    ```
+    
+    
         
     ### More detail
     * can take several seconds to run

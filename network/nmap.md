@@ -3,19 +3,19 @@
     Commonly used nmap scans
     
 ## Simple Scan
-* basically just gets ports
+    * basically just gets ports
     ``` 
     nmap -sS <ip> 
     ```
 
 ## UDP scans
-* scan udp ports, note if no ports found then host not detected
+    * scan udp ports, note if no ports found then host not detected
     ``` 
     nmap -sU <ip> 
     ```
 
 ## OS scan
-* attempt to detect os of host
+    * attempt to detect os of host
     ``` 
     nmap -O <ip> 
     ```

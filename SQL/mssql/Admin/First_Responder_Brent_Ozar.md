@@ -42,7 +42,7 @@
     * Can add markdown print type with "@OutputType = 'markdown';"
     * Add stored procedure to Master db for best practice to avoid digging in db's for it
     
-## sp_blitzFirst
+## sp_BlitzFirst
 
 * meant to run as first response to issue
 * if no problems found, that will be the second row of results
@@ -55,14 +55,11 @@
     ```
     
     ### Top 10
-    * Gets the top 10 Waits
-    * Brent says he will analyze this if we send him a screenshot (from imgur), he will give feedback free
-    
+    * Gets the top 10 Waits    
     ```
     sp_BlitzFirst @SinceStartup = 1, @OutputType = 'Top10';
     ```
-    
-    
+
         
     ### More detail
     * can take several seconds to run
@@ -75,6 +72,13 @@
         * Wait Stats
         * Storage
         * perfmon counters
+        
+    ### More params
+        
+        ```
+        * Check Server info (CPU speed and cores)
+        @CheckServerInfo = 1,
+        ```
         
     ### Cron process
     
@@ -99,4 +103,79 @@
         SELECT * FROM DBAtools.dbo.BlitzFirst_WaitStats_Deltas
         Order BY wait_time_minutes_delta DESC
         ```
+
+## sp_BlitzWho
+* see all active queries
+* typically run multiple times to see things that run briefly
+
+```
+sp_BlitzWho
+GO 20
+```
+
+## sp_BlitzCache
+* see top resource intensive queries
+* Note: can't catch if we keep resetting our own plan cache or option recompile are on
+
+```
+EXEC sp_BlitzCache
+GO
+EXEC sp_BlitzCache @SortOrder = 'reads';
+```
+
+    # Sort Order
+    CXPACKET, CXCONSUMER, LATCH_EX: Sort by CPU and by READS. Queries going parallel to read a lot of data or do a lot of CPU work. 
+    LCK%: locking. Sort by DURATION, and look for the warning of “Long Running, Low CPU.” That’s probably a query being blocked.
+    PAGEIOLATCH:  Sort by READS. reading data pages that aren’t cached in RAM.
+    RESOURCE_SEMAPHORE: Sort by MEMORY GRANT, although that isn’t available in older versions of SQL. queries can’t get enough workspace memory to start running. 
+    SOS_SCHEDULER_YIELD: Sort by CPU. CPU pressure, so 
+    WRITELOG: Sort by WRITES. writing to the transaction log for delete/update/insert (DUI) work. 
     
+    
+    # More params
+    
+    @SortOrder = '<Category>'           # Common sort categories: 'CPU' 'WRITES' 'READS' 'DURATION' 'MEMORY GRANT' 'AVG CPU' 'AVG READS' 'EXECUTIONS' 'XPM' (executions per minute)
+    @MinutesBack = <minutex>            # Only see queries that have run that many minutes back
+    @StoredProcName = '<stored proc>'   # Sort by stored procedure
+    @DatabaseName = '<db_name>'         # Filteres to only info on your db
+    @OnlyQueryHashes = '<query_hash>'   # Query hash can be found by right clicking query plan, click properties, observe in Properties "QueryHash", can be comma delimited
+    @ExportToExcel                      # Puts results in XML format to copy and paste away
+    
+    ## Output to TABLE
+    @OutputDatabaseName = 'DBATools'
+    @OutputSchemaName = 'dbo'
+    @OutputTableName = 'BlitzCache'
+    
+## sp_BlitzIndex
+
+```
+sp_BlitzIndex
+```
+
+    ### More params
+    @GetAllDatabases = 1                # Get info on all databases in server
+    @BringThePain = 1                   # Required for getting more than 50 db's info, not intense just slow. Can run for more than a couple minutes
+    @Mode = 0                           # Default mode is 0, 2 gets all indexes that exist on a db for inventory, Mode 3 finds missing indexes
+    @SortOrder                          # 'ROWS' 'SIZE'
+    
+    ### Output
+    
+    Details column: often gives benefits per day, Brent advises <1,000,000 is not worth making a change
+    Usage column: uses = how many times sql detected usage, Impact = how much sql thinks indexing might be able to improve performance, Avg query cost = Sql bucks spent on each execution
+    More Info column: query to get more info on this issue
+
+    
+## Mess with People
+* Make an empty db
+
+```
+CREATE DATABASE [ ];        -- move to db after
+CREATE SCHEMA [ ];
+CREATE TABLE [ ].[ ]([ ] INT IDENTITY(1,1));
+```
+    
+## Workflow
+
+    EXEC sp_BlitzFirst @SinceStartup = 1, @OutputType = 'Top10';
+    GO
+    -- Figure out what you need to sort by (see BlitzCache Sort Order)

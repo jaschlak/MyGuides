@@ -5,10 +5,14 @@
 
 ## Code:
 
-    SELECT      c.name  AS 'ColumnName'  
-                 ,t.name AS 'TableName'  
+    SELECT      
+        t.name AS 'TableName' 
+        ,c.name  AS 'ColumnName'  
     FROM        sys.columns c  
     JOIN        sys.tables  t   ON c.object_id = t.object_id  
-    WHERE       c.name LIKE '%\<insert column name\>%' AND t.name like '\<insert specifier for table\>';  
+    WHERE       
+        t.name like '\<insert specifier for table\>'
+        AND 
+        c.name LIKE '%\<insert column name\>%'
     ORDER BY    TableName  
                 ,ColumnName;

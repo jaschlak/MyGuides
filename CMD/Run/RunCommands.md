@@ -108,6 +108,10 @@
 
     gpedit.msc
     
+#### Microsoft Management Console
+
+    mmc
+    
 #### System Properties
 
     sysdm.cpl

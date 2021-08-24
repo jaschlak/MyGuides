@@ -91,7 +91,7 @@
 	@OutputSchemaName = 'dbo',
 	@OutputTableName = 'BlitzFirst',
 	@OutputTableNameFileStats = 'BlitzFirst_FileStats',
-	@OutputTableNameTableNamePerfmonStats = 'BlitzFirst_PerfmonStats',
+	@OutputTableNamePerfmonStats = 'BlitzFirst_PerfmonStats',
 	@OutputTableNameWaitStats = 'BlitzFirst_WaitStats',
 	@OutputTableNameBlitzCache = 'BlitzCache',
 	@OutputType = 'None'
@@ -156,7 +156,7 @@ sp_BlitzIndex
     @GetAllDatabases = 1                # Get info on all databases in server
     @BringThePain = 1                   # Required for getting more than 50 db's info, not intense just slow. Can run for more than a couple minutes
     @Mode = 0                           # Default mode is 0, 2 gets all indexes that exist on a db for inventory, Mode 3 finds missing indexes
-    @SortOrder                          # 'ROWS' 'SIZE'
+    @SortOrder                          # 'ROWS' 'SIZE' 'WRITES'
     
     ### Output
     
@@ -164,6 +164,11 @@ sp_BlitzIndex
     Usage column: uses = how many times sql detected usage, Impact = how much sql thinks indexing might be able to improve performance, Avg query cost = Sql bucks spent on each execution
     More Info column: query to get more info on this issue
 
+
+    ## Output to TABLE
+    @OutputDatabaseName = 'DBATools'
+    @OutputSchemaName = 'dbo'
+    @OutputTableName = 'BlitzIndex'
     
 ## Mess with People
 * Make an empty db

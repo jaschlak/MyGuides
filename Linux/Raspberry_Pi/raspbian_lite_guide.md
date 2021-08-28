@@ -46,10 +46,10 @@
             ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
             update_config=1
             network={
-             ssid="<wifi ssid>"
-             scan_ssid=1
-             psk="<wifi password>"
-             key_mgmt=WPA-PSK
+                ssid="<wifi ssid>"
+                scan_ssid=1
+                psk="<wifi password>"
+                key_mgmt=WPA-PSK
             }
             
     Enable SSH

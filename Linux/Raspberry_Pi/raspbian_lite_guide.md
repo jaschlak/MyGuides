@@ -59,6 +59,7 @@
 
 ### Step 4: Boot Up Pi
 
+    * remove sd card from computer and insert into raspberry pi
     * Connect all peripheral devices (ensure hdmi is connected before power)
     * power on raspberry pi
     

@@ -14,5 +14,5 @@ import keyboard
         if keyboard.is_pressed('q'):
             print('you pressed q!!!')
             
-        if keyboard.is_wqqwqwwqpressed('z'):
+        if keyboard.is_pressed('z'):
             break

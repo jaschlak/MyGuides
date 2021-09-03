@@ -6,13 +6,13 @@
 
 import keyboard
 
-while True:
-    
-    if keyboard.is_pressed('w'):
-        print('You pressed w!!!')
+    while True:
         
-    if keyboard.is_pressed('q'):
-        print('you pressed q!!!')
-        
-    if keyboard.is_wqqwqwwqpressed('z'):
-        break
+        if keyboard.is_pressed('w'):
+            print('You pressed w!!!')
+            
+        if keyboard.is_pressed('q'):
+            print('you pressed q!!!')
+            
+        if keyboard.is_wqqwqwwqpressed('z'):
+            break

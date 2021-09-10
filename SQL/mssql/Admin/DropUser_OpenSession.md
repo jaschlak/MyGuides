@@ -11,3 +11,7 @@
 ## Kill session (with ID found above)
 
     KILL <enter session id number from above query>
+    
+## Drop User
+
+    DROP LOGIN <username>

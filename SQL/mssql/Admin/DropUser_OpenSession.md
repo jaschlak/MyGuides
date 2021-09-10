@@ -12,6 +12,11 @@
 
     KILL <enter session id number from above query>
     
-## Drop User
+## Drop LOGIN (server)
 
-    DROP LOGIN <username>
+    DROP LOGIN <loginname>
+    
+## Dop Users (database)
+
+    USE <db_name>
+    DROP USER <username>

@@ -16,7 +16,6 @@ class LoggerTestService:
     def run(self):
         """Main service loop. This is where work is done!"""
         write_to_logs()
-        time.sleep(90)
         self.running = True
         while self.running:
             time.sleep(10)  # Important work
@@ -25,8 +24,9 @@ class LoggerTestService:
 
 class LoggerTestServiceFramework(win32serviceutil.ServiceFramework):
 
-    _svc_name_ = 'LoggerTestService'
-    _svc_display_name_ = 'My Logger Test Service display name'
+    _svc_name_ = 'MyLoggerService'
+    _svc_display_name_ = 'MyLoggerService'
+    _svc_description_ = 'Log Test with Python Service'
 
     def SvcStop(self):
         """Stop the service"""

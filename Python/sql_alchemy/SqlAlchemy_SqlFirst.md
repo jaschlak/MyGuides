@@ -7,6 +7,7 @@
     import sqlalchemy
     import pyodbc
     import pandas as pd
+    import os
 
     class SQL:
         
@@ -19,7 +20,10 @@
             self.ip = '<ip_address or host name>'
             self.port = ''
             self.dbname = '<db_name>'
-            self.sql_driver_name = 'SQL+Server'
+            if os.name == 'nt':
+                self.sql_driver_name = 'SQL+Server'
+            elif os.name == 'posix':
+                self.sql_driver_name = self.get_linux_driver()
             self.statement = ''
             
         def auto_config(self):
@@ -36,7 +40,13 @@
             if self.trusted_connection.lower() == 'yes':
                 self.sqluser = ''
                 self.sqlpass = ''
-                
+
+        def get_df(self):
+            
+            con = self.my_engine().connect()
+            
+            return pd.read_sql(self.statement, con)
+
         def get_engine(self):
             
             ## SQLEXPRESS

@@ -3,6 +3,9 @@
 import os
 import logging
 from logging import handlers
+import time
+import datetime
+import threading
 
 
 class LogClass:
@@ -10,7 +13,7 @@ class LogClass:
     def __init__(self):
         
         folderpath = 'C:\Logs'
-        filename = 'python_service.log'
+        filename = 'python_test.log'
         LOGFILEPATH = '/'.join([folderpath,filename])
         
         if not os.path.exists(folderpath):
@@ -30,3 +33,23 @@ class LogClass:
         logger.addHandler(handler)
         
         self.logger = logger
+  
+def log_entries():
+    
+    Log = LogClass()
+    
+    last_time = time.time()
+    
+    Log.logger.info('Starting Service at: {}'.format(datetime.datetime.now()))
+    
+    while True:
+    
+        if time.time() - last_time > 5:
+            
+            Log.logger.info('last_update: {}'.format(datetime.datetime.now()))
+            last_time = time.time()
+  
+if __name__ == '__main__':
+
+    x = threading.Thread(target=log_entries, args=())
+    x.start()

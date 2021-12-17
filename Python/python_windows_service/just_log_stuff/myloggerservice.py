@@ -7,7 +7,7 @@ import servicemanager  # Simple setup and logging
 
 from myloggerprogram import write_to_logs
 
-class MyService:
+class LoggerTestService:
     """Silly little application stub"""
     def stop(self):
         """Stop the service"""
@@ -16,16 +16,17 @@ class MyService:
     def run(self):
         """Main service loop. This is where work is done!"""
         write_to_logs()
+        time.sleep(90)
         self.running = True
         while self.running:
             time.sleep(10)  # Important work
             servicemanager.LogInfoMsg("Service running...")
 
 
-class MyServiceFramework(win32serviceutil.ServiceFramework):
+class LoggerTestServiceFramework(win32serviceutil.ServiceFramework):
 
-    _svc_name_ = 'MyService'
-    _svc_display_name_ = 'My Service display name'
+    _svc_name_ = 'LoggerTestService'
+    _svc_display_name_ = 'My Logger Test Service display name'
 
     def SvcStop(self):
         """Stop the service"""
@@ -36,7 +37,7 @@ class MyServiceFramework(win32serviceutil.ServiceFramework):
     def SvcDoRun(self):
         """Start the service; does not return until stopped"""
         self.ReportServiceStatus(win32service.SERVICE_START_PENDING)
-        self.service_impl = MyService()
+        self.service_impl = LoggerTestService()
         self.ReportServiceStatus(win32service.SERVICE_RUNNING)
         # Run the service
         self.service_impl.run()
@@ -45,10 +46,10 @@ class MyServiceFramework(win32serviceutil.ServiceFramework):
 def init():
     if len(sys.argv) == 1:
         servicemanager.Initialize()
-        servicemanager.PrepareToHostSingle(MyServiceFramework)
+        servicemanager.PrepareToHostSingle(LoggerTestServiceFramework)
         servicemanager.StartServiceCtrlDispatcher()
     else:
-        win32serviceutil.HandleCommandLine(MyServiceFramework)
+        win32serviceutil.HandleCommandLine(LoggerTestServiceFramework)
 
 
 if __name__ == '__main__':

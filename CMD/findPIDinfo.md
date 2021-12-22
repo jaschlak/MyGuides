@@ -13,6 +13,6 @@
     
 # cmd
 
-    wmic process get ProcessID,ExecutablePath                                                   # results for all pid's    
-    wmic process where "name='mysqld.exe'" get ProcessID, ExecutablePath                        # search by process name
-    wmic process where "name='mysqld.exe'" get ProcessID, ExecutablePath /FORMAT:LIST           # search by process name and get results in a list
+    wmic process get ProcessID,name,ExecutablePath                                              # results for all pid's    
+    wmic process where "name='<processname>'" get ProcessID, ExecutablePath                     # search by process name
+    wmic process where "name='<processname>'" get ProcessID, name, ExecutablePath /FORMAT:LIST  # search by process name and get id,name,path in a list

@@ -26,7 +26,8 @@
     
 ## External Resources
 
-### All-In-One Guides
+### All-In-One Guides/Documents
+
     https://github.com/F3dai/OSINT-Resources                                                                                            # all sorts of tools
     https://cdn.discordapp.com/attachments/607679536741613599/920213433700458536/Complete_List_of_OSINT_Web_Resources_Light_ohshint.pdf # pdf of all sorts of tools (looks like a lot of content)
     https://cdn.discordapp.com/attachments/607679536741613599/918375440765313055/1_Complete_Bookmarks_Organized_8-12-2021_ohshint.html  # someones volunteer bookmarks

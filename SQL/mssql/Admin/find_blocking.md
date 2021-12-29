@@ -1,6 +1,7 @@
 # Find Blocking
 
     Tools for finding blocking
+    Source: https://blog.sqlauthority.com/2015/07/07/sql-server-identifying-blocking-chain-using-sql-scripts/
     
 ## t-sql (create blocking tree, view tree, remove temp table)
 

@@ -67,6 +67,7 @@
 ### Scam Recon
 
     https://scamsearch.io/                                                                                                              # scam database
+    https://tokensniffer.com/                                                                                                           # crypto scam lookup
     
 ### Tips and Tricks
 

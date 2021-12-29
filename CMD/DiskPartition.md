@@ -6,24 +6,24 @@
 
     Open CMD as admin
     
-    diskpart                        # opens Disk Partitioner (If cmd hangs, remove sd)
-            
-    list disk                       # find your partition you want to formatter
-            
-    select disk <Disk>              # pick that disk
-            
-    clean                           # cleans the disk of all contents
-            
-    list disk                       # verify the disk is still selected by *
-        
-    create partition primary        # creates partition
-        
-    select partition 1              # select created partition
-        
-    active                        # make sure partition is active
+    diskpart                                # opens Disk Partitioner (If cmd hangs, remove sd)
+                    
+    list disk                               # find your partition you want to formatter
+                    
+    select disk <Disk>                      # pick that disk
+                    
+    clean                                   # cleans the disk of all contents
+                    
+    list disk                               # verify the disk is still selected by *
+                
+    create partition primary                # creates partition
+                
+    select partition 1                      # select created partition
+                
+    active                                  # make sure partition is active
     
-    format FS=NTFS label=Data quick # formats the drive
+    format FS=NTFS label=<disk name> quick  # formats the drive other FS=FAT32, quick is optional
     
-    assign letter=d                 # assing partition a letter
+    assign letter=<drive letter>            # assing drive letter
     
     exit

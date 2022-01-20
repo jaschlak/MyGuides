@@ -7,10 +7,18 @@ from logging import handlers
 
 class LogClass:
     
-    def __init__(self):
+    def __init__(self, logname='test'):
         
-        folderpath = 'C:\Logs'
-        filename = 'python_service.log'
+        if os.name == 'nt':
+            folderpath = 'C:\Logs'
+            filename = logname + '.log'
+        elif os.name == 'posix':
+            folderpath = './logs'
+            filename = logname + '.log'
+        else:
+            folderpath = '~'
+            filename = 'couldnt_detect_os.log'
+            
         LOGFILEPATH = '/'.join([folderpath,filename])
         
         if not os.path.exists(folderpath):

@@ -6,9 +6,9 @@
 
     grep --regexp="<search string>" --count <path to file>                          # use regex to search for string in a file and get count
     
-## Awk 
+## Awk (command instead of filename is supported)
 
-    source:https://www.geeksforgeeks.org/awk-command-unixlinux-examples/ (command instead of filename is supported)
+    source:https://www.geeksforgeeks.org/awk-command-unixlinux-examples/
 
     awk '<search criteria>' {print} <filename>                                      # search for string in file (command instead of filename is supported)
     awk -F':' '{print $1}' <filename>                                               change delimeter to ":"

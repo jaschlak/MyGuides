@@ -32,6 +32,7 @@
     https://cdn.discordapp.com/attachments/607679536741613599/920213433700458536/Complete_List_of_OSINT_Web_Resources_Light_ohshint.pdf # pdf of all sorts of tools (looks like a lot of content)
     https://cdn.discordapp.com/attachments/607679536741613599/918375440765313055/1_Complete_Bookmarks_Organized_8-12-2021_ohshint.html  # someones volunteer bookmarks
     https://github.com/OhShINT/ohshint.gitbook.io/tree/main/Lists_of_OSINT_Web_Resources                                                # another repo of tools
+    https://securitytrails.com/blog/recon-ng                                                                                            # dashboard or cli. search, install, load, get info on modules before running 
     
 ### Language Translators
 
@@ -44,6 +45,9 @@
     http://sleepingtime.org/                                                                                                            # sleep time of people on twitter
     https://twitch-tools.rootonline.de/channel_previews.php                                                                             # twitch lookup
     https://rhematt.github.io/Snap-Scraper/                                                                                             # find snapchat story content by geolocation
+    https://pythonrepo.com/repo/megadose-holehe                                                                                         # searches for social media accounts by email
+    https://defensehorizon.com/2021/03/07/osint-hunting-usernames-with-sherlock/                                                        # search social media accounts by username
+    https://www.geocreepy.com/                                                                                                          # search location of friends on flickr, instagam, twitter
     
 ### Dox Tools (information consolidation)
 

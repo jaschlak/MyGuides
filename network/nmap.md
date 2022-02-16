@@ -58,7 +58,7 @@ nmap -p- <ip>
 ```
 nmap --script <script_path> <ip>
 nmap --script <script> <ip>
-ex: nmap --script http-headers earthchildswmo.com
+ex: nmap --script http-headers google.com
 ```
 
 ## Script Vulnerability scan

@@ -10,7 +10,9 @@ nmap -sS <ip>
 
 ## Ping discovery
 * discover host without pinging host
+``` 
 nmap -Pn <ip>
+``` 
 
 ## UDP scans
 * scan udp ports, note if no ports found then host not detected

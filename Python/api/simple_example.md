@@ -1,6 +1,6 @@
 # API simple example
 
-    this is a simple example of how to setup a python api
+    this is a simple example of how to setup a python api from video: https://www.youtube.com/watch?v=s_ht4AKnWZg
     
 ## code
 

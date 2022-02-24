@@ -71,6 +71,22 @@
     ## Show number of rows and columns in DataFrame
     
         df.shape
+        
+    ## Modify dataframe column based on multiple column conditions (custom function)
+    
+        #Note: needs to utilize apply functions
+        import pandas as pd
+
+        def check_fun(x,y):
+            if x == '1' and y == '4':
+                return 'see I changed'
+            
+        def apply_check(x): 
+            return check_fun(x['A'], x['B'])
+
+        df = pd.DataFrame({'A':['1','2','3'], 'B':['4','5','6'], 'C':[None, None, None]})
+
+        df['C'] = df.apply(apply_check, axis=1)
     
 # Selecting Subsets of information
 

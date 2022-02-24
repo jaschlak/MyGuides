@@ -84,9 +84,13 @@
         def apply_check(x): 
             return check_fun(x['A'], x['B'])
 
+        # build dataframe
         df = pd.DataFrame({'A':['1','2','3'], 'B':['4','5','6'], 'C':[None, None, None]})
 
+        # apply df function
         df['C'] = df.apply(apply_check, axis=1)
+        
+        print(df)
     
 # Selecting Subsets of information
 

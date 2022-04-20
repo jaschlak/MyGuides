@@ -28,7 +28,7 @@
             
             #self.engine = create_engine('sqlite:///input/users.db', echo=False)
             
-            self.engine = create_engine('mssql+pymssql://sa:DMPSecure1$@10.3.6.28:1433/virtual_panel', echo=False)
+            self.engine = create_engine('mssql+pymssql://<username>:<password>@<hostip>:<port>/<db>', echo=False)
             Base.metadata.create_all(bind=self.engine)
             self.Session = sessionmaker(bind=self.engine)
         

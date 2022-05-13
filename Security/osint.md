@@ -72,6 +72,10 @@
 
     https://scamsearch.io/                                                                                                              # scam database
     https://tokensniffer.com/                                                                                                           # crypto scam lookup
+
+### Domain osint
+
+    https://osintframework.com/                                                                                                         # framework for recon tools (follow map)
     
 ### Tips and Tricks
 
@@ -94,3 +98,4 @@
         a) remove "overflow:hidden;"
     2) locate <div clas"RnEpo Yx5HN" role="presentation">
         a) delete element
+        

@@ -5,4 +5,4 @@
 ## Code:
 
     dir <path>\*<string filename contains>* /s /b /a-d                          # Searches for file names only recursively
-    dir <path>\*<string filename contains>* /s /b /o:n /ad                      # Searches for folder names only recursively
+    dir <path>\*<string foldername contains>* /s /b /o:n /ad                      # Searches for folder names only recursively

@@ -4,7 +4,7 @@
     
     Cycle through all scanable servers and gain access and hack (if no extra ports needed)
     
-## Script
+## scan_hack.js Script
 
     function canHackServer(ns, hostName)
     {
@@ -36,34 +36,37 @@
 
     export async function main(ns) 
     {
-        var hostNames = await ns.scan();
+		while (true)
+		{
+			var hostNames = await ns.scan('home');
 
-        for (var i=0; i<hostNames.length; i++)
-        {
-            var hostName = hostNames[i];
-            
-            if (await ns.hasRootAccess(hostName))
-            {
-                
-                // grow
-                await doGrow(ns, hostName);
+			for (var i=0; i<hostNames.length; i++)
+			{
+				var hostName = hostNames[i];
+				
+				if (await ns.hasRootAccess(hostName))
+				{
+					
+					// grow
+					await doGrow(ns, hostName);
 
-                // weaken
-                await doWeaken(ns, hostName);
+					// weaken
+					await doWeaken(ns, hostName);
 
-                // hack
-                await ns.hack(hostName);
+					// hack
+					await ns.hack(hostName);
 
-            } else
-            {
-                if (canHackServer)
-                {
-                    // ports open
-                    if (await ns.getServerNumPortsRequired(hostName) == 0)
-                    {
-                        await ns.nuke(hostName);
-                    }
-                }
-            }
-        }
+				} else
+				{
+					if (canHackServer)
+					{
+						// ports open
+						if (await ns.getServerNumPortsRequired(hostName) == 0)
+						{
+							await ns.nuke(hostName);
+						}
+					}
+				}
+			}
+		}
     }

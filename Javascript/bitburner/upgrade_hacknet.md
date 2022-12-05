@@ -2,7 +2,7 @@
 
     This is to upgrade the hacknets whenever money is available
     
-## Script
+## upgrade_hacknet.md Script
 
     export async function upgradeNodeLevel(ns, node)
     {

@@ -2,7 +2,7 @@
 
     This is a local script to be distributed out to all servers you have root access to and run
     
-## Script
+## local_hack.js Script
 
     export async function main(ns) 
     {

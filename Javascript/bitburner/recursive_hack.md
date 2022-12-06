@@ -1,0 +1,115 @@
+# Recursive Hack
+
+	This uses recursion to propogate accross the network and hack the nodes that we have access.
+	Future: run local_hack.js from home directory on all nodes with root access
+	
+## recursive_hack.js
+
+	function canHackServer(ns, hostName)
+	{
+		if (ns.getServerSecurityLevel(hostName) <= ns.getServerSecurityLevel("home"))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	export async function doGrow(ns, hostName)
+	{
+		if (await ns.getServerMoneyAvailable(hostName) < await ns.getServerMaxMoney(hostName))
+		{
+			await ns.grow(hostName);
+		} 
+	}
+
+	export async function doWeaken(ns, hostName)
+	{
+		if (await ns.getServerSecurityLevel(hostName) > await ns.getServerMinSecurityLevel(hostName))
+		{
+			await ns.weaken(hostName);
+		}
+	}
+
+
+
+	export async function scanServer(ns,processList,processedList) {
+
+		//filtering specified nodes
+		while (processedList.includes(processList[0]))
+		{
+			//ns.tprint('True stuff right here');
+			processList.shift();
+		}
+
+		// scan current node and add to list to process
+		var newScan = ns.scan(processList[0])
+		processList = processList.concat(newScan);
+
+		//filtering specified nodes (in case process servers crept in)
+		while (processedList.includes(processList[0]))
+		{
+			//ns.tprint('True stuff right here');
+			processList.shift();
+		}
+
+		if (processList.length > 0) {
+
+			// print node and list to process
+			/*
+			ns.tprint(processList[0]);
+			ns.tprint(processList);
+			ns.tprint(processedList);
+			ns.tprint('');
+			*/
+
+			// start process //
+
+			var hostName = processList[0];
+
+			if (await ns.hasRootAccess(hostName))
+			{
+				// grow
+				await doGrow(ns, hostName);
+
+				// weaken
+				await doWeaken(ns, hostName);
+
+				// hack
+				await ns.hack(hostName);
+
+			} else
+			{
+				if (canHackServer)
+				{
+					// ports open
+					if (await ns.getServerNumPortsRequired(hostName) == 0)
+					{
+						await ns.nuke(hostName);
+					}
+				}
+			}
+
+			// end process //
+
+			//ns.tprint('attempting to push');
+			processedList.push(processList.shift()); 
+
+			// call function again
+			await scanServer(ns,processList,processedList);
+		}
+	}
+
+	/** @param {NS} ns */
+	export async function main(ns) 
+	{
+		while(true)
+		{
+			var processList = await ns.scan('home');
+			var processedList = ['home','ps_node1','ps_node1-0','ps_node2','ps_node3','ps_node4','CSEC','undefined'];
+			await scanServer(ns,processList,processedList);
+			//ns.sleep(1000);
+		}
+	}

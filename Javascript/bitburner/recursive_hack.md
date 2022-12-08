@@ -105,6 +105,15 @@
 	/** @param {NS} ns */
 	export async function main(ns) 
 	{
+    	ns.disableLog('scan');
+        ns.disableLog('getServerMoneyAvailable');
+        ns.disableLog('getServerMaxMoney');
+        ns.disableLog('grow');
+        ns.disableLog('getServerSecurityLevel');
+        ns.disableLog('getServerMinSecurityLevel');
+        ns.disableLog('weaken');
+        ns.disableLog('getServerNumPortsRequired');
+        
 		while(true)
 		{
 			var processList = await ns.scan('home');

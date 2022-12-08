@@ -55,10 +55,10 @@
                 // upgrade cores
                 await upgradeNodeCore(ns,i);
 
-                // purchase node
-                await purchaseNewNode(ns,i);
-
             }
+            
+            // purchase node
+            await purchaseNewNode(ns,i);
             await ns.sleep(1000);
         }
     }

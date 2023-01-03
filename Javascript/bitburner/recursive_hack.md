@@ -5,11 +5,47 @@
 	
 ## recursive_hack.js
 
+	export async function getOpenPortCount(ns, hostName)
+	{
+		var srvAttr = await ns.getServer(hostName);
+
+		if (srvAttr['openPortCount'] <= srvAttr['numOpenPortsRequired'])
+
+		if (ns.fileExists('bruteSSH.exe','home')) 
+		{
+			await ns.brutessh(hostName);
+		};
+
+		if (ns.fileExists('FTPcrack.exe','home')) 
+		{
+			await await ns.ftpcrack(hostName);
+		};
+
+		if (ns.fileExists('relaySMTP.exe','home')) 
+		{
+			await ns.relaysmtp(hostName);
+		};
+		if (ns.fileExists('HTTPWorm.exe','home')) 
+		{
+			await ns.httpworm(hostName);
+		};
+		if (ns.fileExists('SQLinjection.exe','home')) 
+		{
+			await ns.sqlinject(hostName);
+		};
+
 	function canHackServer(ns, hostName)
 	{
-		if (ns.getServerSecurityLevel(hostName) <= ns.getServerSecurityLevel("home"))
+		// if hacking level large enough and ports open
+		if (ns.getServerSecurityLevel(hostName) <= ns.getHackingLevel())
 		{
-			return true;
+			if(serverAttr['numOpenPortsRequired'] <= serverAttr['openPortCount'])
+			{
+				return true;
+			} else
+			{
+				openPorts(ns,hostName);
+			}
 		}
 		else
 		{
@@ -40,7 +76,6 @@
 		//filtering specified nodes
 		while (processedList.includes(processList[0]))
 		{
-			//ns.tprint('True stuff right here');
 			processList.shift();
 		}
 
@@ -82,13 +117,9 @@
 
 			} else
 			{
-				if (canHackServer)
+				if (canHackServer(ns,hostName)
 				{
-					// ports open
-					if (await ns.getServerNumPortsRequired(hostName) == 0)
-					{
-						await ns.nuke(hostName);
-					}
+					await ns.nuke(hostName);
 				}
 			}
 
@@ -117,7 +148,7 @@
 		while(true)
 		{
 			var processList = await ns.scan('home');
-			var processedList = ['home','ps_node1','ps_node1-0','ps_node2','ps_node3','ps_node4','CSEC','undefined'];
+			var processedList = ['home','ps_node1','ps_node2','ps_node3','ps_node4','CSEC','undefined'];
 			await scanServer(ns,processList,processedList);
 			//ns.sleep(1000);
 		}

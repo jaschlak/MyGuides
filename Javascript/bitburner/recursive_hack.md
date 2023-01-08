@@ -11,25 +11,25 @@
 
         if (srvAttr['openPortCount'] <= srvAttr['numOpenPortsRequired'])
 
-        if (ns.fileExists('bruteSSH.exe','home')) 
+        if (await ns.fileExists('bruteSSH.exe','home')) 
         {
             await ns.brutessh(hostName);
         };
 
-        if (ns.fileExists('FTPcrack.exe','home')) 
+        if (await ns.fileExists('FTPcrack.exe','home')) 
         {
             await await ns.ftpcrack(hostName);
         };
 
-        if (ns.fileExists('relaySMTP.exe','home')) 
+        if (await ns.fileExists('relaySMTP.exe','home')) 
         {
             await ns.relaysmtp(hostName);
         };
-        if (ns.fileExists('HTTPWorm.exe','home')) 
+        if (await ns.fileExists('HTTPWorm.exe','home')) 
         {
             await ns.httpworm(hostName);
         };
-        if (ns.fileExists('SQLinjection.exe','home')) 
+        if (await ns.fileExists('SQLinjection.exe','home')) 
         {
             await ns.sqlinject(hostName);
         };

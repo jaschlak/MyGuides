@@ -137,4 +137,11 @@
         git push dest --all                                         # Pushes all branches to destination repository
     
 
-    
+## Using public key
+
+	Copy ssh key to clipboard and paste to Github Keys
+		Github User -> Settings -> SSH and GPG keys -> "New SSH key"
+		cat ~/.ssh/id_rsa.pub | clip
+		
+	Set remote url (add remote first)
+		git remote set-url origin git@github.com:username/your-repository.git

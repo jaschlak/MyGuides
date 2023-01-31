@@ -145,3 +145,6 @@
 		
 	Set remote url (add remote first)
 		git remote set-url origin git@github.com:username/your-repository.git
+        
+    New standards for keys need to be better than rsa (comment optional, might put email?)
+        ssh-keygen -t ecdsa -b 521 -c <comment> 

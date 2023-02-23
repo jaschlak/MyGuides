@@ -73,6 +73,7 @@
 ## display currently running processes
 
     ps
+    ps aux                                                  # extra output
     ps -x                                                   # all processes owned by you
     ps -fU <user>                                           # display users proces by username
     ps -fu <pid number>                                     # display process by pid

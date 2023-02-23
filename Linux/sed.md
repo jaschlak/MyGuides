@@ -5,3 +5,7 @@
 ## Find string match from regex (start and finish) accross multiple lines
 
     sed -n '/<start string>/,/<end string>/p' <filename>
+    
+## Replace string
+
+    sed -i 's/<old-text>/<new-text>/g' <filename>

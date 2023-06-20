@@ -7,8 +7,8 @@
     
 ## Different types of access modifiers
 
-    public
-    private
-    protected
-    internal
-    protected internal
+    public                      # can be called from anywhere
+    private                     # cannot be called from outside class
+    protected                   # can be called from class and derived classes only, avoid if you can and use private
+    internal                    # can be used within same assembly
+    protected internal          # can be used from within assembly or derived classes

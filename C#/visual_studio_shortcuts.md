@@ -9,6 +9,8 @@ ctrl+tab            switch between open tabs
 
 cw                  Console.WriteLine()
 ctor                Constructor
+prop                Property; enter type {tab}{tab} enter prop name {tab}
+dict                Dictionary {tab} through types
 
 
 ## working with constructors

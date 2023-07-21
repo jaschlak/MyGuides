@@ -65,3 +65,6 @@
 ## pipe commands
 
     <command 1> -exec <command 2> {} \;
+	
+## see if user has permissions to read file
+	su <user> -s /bin/bash -c 'if [ -r <filepath> ]; then echo "Readable"; else echo "Invalid permissions"; fi'

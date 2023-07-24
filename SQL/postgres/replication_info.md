@@ -22,4 +22,4 @@
 
     \x                                                              # toggle expanded display (inline replication info, show info vs how many rows of replication)
 
-    
+    pg_lsclusters                                                   # see cluster status (linux terminal)

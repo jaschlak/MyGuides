@@ -23,3 +23,25 @@
     // copy file from local directory to container
     docker cp <local_file_name> <container_id>:<container_filepath>
     
+    # run existing docker container
+    docker run -it --name <container_instance_name> -p <host_port>:<container_port> -v <host_path>:<container_path> <import_container> <shell_type>
+    
+        host_path, current directory = ${PWD} (linux), %cd% (windows)
+        shell_type = bash (linux), cmd.exe (windows)
+    
+    
+##  Examples
+
+    # run "mypython1" container with -it (interactive) python 3.7 module (official from docker hub) with linux bash using host:container (ports)
+    #   mapping PWD (parent working directory) to the python app (container) so the container can read/write in this directory
+    #   note: in windows %cd% instead of ${pwd}
+    docker run -it --name mypython1 -p 5000:5000 -v ${PWD}:/app python:3.7 bash
+    
+    # start "mypython1" container again -i interactive, -a attach
+    docker start -ia mypython1
+    
+    # attach to running docker container
+    docker attach <docker contai
+    
+    # remove "mypython1" container
+    docker rm mypython1

@@ -17,3 +17,6 @@
     SELECT * FROM information_schema.tables;                                        # see schema info from all tables
     SELECT * FROM information_schema.tables WHERE table_schema = 'schema_name';     # show schema info for table within schema
     
+## Find postgres config path (relative)
+
+    SELECT setting FROM pg_settings WHERE name = 'data_directory';

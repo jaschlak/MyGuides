@@ -41,7 +41,25 @@
     docker start -ia mypython1
     
     # attach to running docker container
-    docker attach <docker contai
+    docker attach <docker container>
     
     # remove "mypython1" container
     docker rm mypython1
+    
+    # build (create, to push), with tag, tag notation: <dockerhub_username>/<image_name>/<version_number>
+    docker build -t <tag name> .
+    
+    # scan build for issues/vulnerabilities
+    docker scout quickview
+    
+    # get cve info for image, image notation: <dockerhub_username>/<image_name>
+    docker scout cves <image_name>
+    
+    # get recommendations for image, image notation: <dockerhub_username>/<image_name>
+    docker scout recommendations <image_name>
+    
+    # push to dockerhub, tag notation: <dockerhub_username>/<image_name>/<version_number>
+    docker push <tag name>
+    
+    # run docker image w tag, tag notation: <dockerhub_username>/<image_name>/<version_number>
+    docker run -p 5000:5000 <tag_name>

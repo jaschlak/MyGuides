@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "a2630bef-76c9-41d4-91f5-08bfe774b90a",
+		"name": "Docker Flask Microservice Box Turorial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14304207"
+	},
+	"item": [
+		{
+			"name": "Get Box",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/box/:name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"box",
+						":name"
+					],
+					"variable": [
+						{
+							"key": "name",
+							"value": "timing"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Box",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/box/:color",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"box",
+						":color"
+					],
+					"variable": [
+						{
+							"key": "color",
+							"value": "yellow"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Box",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/box/:color",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"box",
+						":color"
+					],
+					"variable": [
+						{
+							"key": "color",
+							"value": "yellow"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Box",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/box/:color/:ball_quant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"box",
+						":color",
+						":ball_quant"
+					],
+					"variable": [
+						{
+							"key": "color",
+							"value": "yellow"
+						},
+						{
+							"key": "ball_quant",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

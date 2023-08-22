@@ -18,6 +18,9 @@
     # install the dependencies and packages in the requirements file
     RUN pip install -r requirements.txt
 
+    # declare persistant volume (persistant db or other file)
+    VOLUME /data
+
     # expose port outside container
     EXPOSE <port>
 

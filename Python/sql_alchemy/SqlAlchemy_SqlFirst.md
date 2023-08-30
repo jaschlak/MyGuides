@@ -187,29 +187,31 @@
             # Note a rollback strategy can be accomplished using sessions: https://docs.sqlalchemy.org/en/13/orm/session_basics.html
                         
                         
-if __name__ == '__main__':
-	
-	import os
-	os.chdir(os.path.dirname(os.getcwd()))
-	
-	from support.config import get_configuration  
+	if __name__ == '__main__':
+		
+		import os
+		os.chdir(os.path.dirname(os.getcwd()))
+		
+		from support.config import get_configuration  
 
-	sql = SQL()
-	
-	db_name = '<db_name>'
-	sql.load_engine(db_name)
-	
-	
-	
-	sql.statement = 'SELECT GETDATE() AS dates'
-	this = sql.get_df()
-	
-	
-	'''
-	# Test write db
-	sql.statement = 'CREATE TABLE test_table (' \
-		'id int,' \
-		'[name] nvarchar(60))'
-	sql.execute_only()
-	'''
-    
+		sql = SQL()
+		
+		db_name = '<db_name>'
+		sql.load_engine(db_name)
+		
+		
+		
+		sql.statement = 'SELECT GETDATE() AS dates'
+		this = sql.get_df()
+		
+		
+		'''
+			# Test write db
+			sql.statement = '' '
+			CREATE TABLE test_table (
+			id int,
+			[name] nvarchar(60))
+			'' '
+			# sql.execute_only()
+		'''
+		

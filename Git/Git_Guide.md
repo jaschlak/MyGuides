@@ -139,12 +139,14 @@
 
 ## Using public key
 
-	Copy ssh key to clipboard and paste to Github Keys
-		Github User -> Settings -> SSH and GPG keys -> "New SSH key"
-		cat ~/.ssh/id_rsa.pub | clip
-		
-	Set remote url (add remote first)
-		git remote set-url origin git@github.com:username/your-repository.git
+    Copy ssh key to clipboard and paste to Github Keys
+        Github User -> Settings -> SSH and GPG keys -> "New SSH key"
+        cat ~/.ssh/id_rsa.pub | clip
         
-    New standards for keys need to be better than rsa (comment optional, might put email?)
+    Set remote url (add remote first)
+        git remote set-url origin git@github.com:username/your-repository.git
+        
+    New standards for keys need to be better than rsa (comment = email usually. Leave comment off in git bash)
         ssh-keygen -t ecdsa -b 521 -c <comment> 
+        or
+        ssh-keygen -t ed25519

@@ -147,6 +147,6 @@
         git remote set-url origin git@github.com:username/your-repository.git
         
     New standards for keys need to be better than rsa (comment = email usually. Leave comment off in git bash)
-        ssh-keygen -t ecdsa -b 521 -c <comment> 
+        ssh-keygen -t ecdsa -b 521 -C <comment> 
         or
-        ssh-keygen -t ed25519
+        ssh-keygen -t ed25519 -C <comment> 

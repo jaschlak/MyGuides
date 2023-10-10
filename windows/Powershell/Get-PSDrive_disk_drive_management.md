@@ -8,6 +8,7 @@
     
 ## See current drive mapping
 
+    Get-PSDrive                                                                 # show all drives
     Get-PSDrive <Drive, letter only>
     
 ## Remove mapping of drive

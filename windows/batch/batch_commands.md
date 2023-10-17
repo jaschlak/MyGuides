@@ -21,7 +21,7 @@
     CLS                     # clear Screen
     TASKLIST                # print list of tasks, pid, session, memory used
     PAUSE                   # pause until user gives input to move ON
-    REM                     # leave a remark (comment line out)
+    REM                     # leave a remark (comment line out), can use ::
     TITLE                   # set title for cmd console
     SHUTDOWN                # shutdown computer /r restart
     COMP <path1> <path2>    # compare 2 file sizes
@@ -38,4 +38,13 @@
     ATTRIB -h <path>        # make file shown
     FIND <path> <string>    # search for string in path
     TYPE <path>             # print the contents of file in path
+    
+## Special Characters
+
+    @                       # show output, hide command
+    ::                      # Comment, alternative to Rem, follow line w ^ to omit next line
+    >                       # redirect output to file
+    >>                      # append output to file
+    ^                       # escape character, line continuation
+    |                       # pipe output to input of 2 separate Commands
     

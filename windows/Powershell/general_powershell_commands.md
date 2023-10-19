@@ -20,6 +20,12 @@
     <array_var_name>.COUNT              # get count of values in array
     <array_var_name>.Get-Type()         # get array type
     
+    Get-Content
+    Get-Content -Path <path> -Tail 5 | Where-Object {$_ -like '*Fail*'}
+    
+    Get-ChildItem -Path <path> -Recurse -Include '*.txt'
+    Get-ChildItem -Path <path> | Select Name,FullName,LastAccessTime,LastWriteTime,Length
+    
 ## General Structure
 
     ### Loops
@@ -28,21 +34,62 @@
 
         for (<initializaiton>; <condition>; <updation>)
         {
-            // Loop body (execution)
+            # Loop body (execution)
         }
         
     #### foreach loop
 
         foreach (<call_variable> in <array>)
         {
-            // Loop body (execution)
+            # Loop body (execution)
         }
+    
+    #### while loop (check condition, then execute if true)
+
+        while(<condition>)
+        {
+            # Loop body (execution)
+        }
+
+    #### do while loop (execute, then check condition to see if still true)
+
+        do
+        {
+            # Loop body (execution)
+        }
+        while (<condition>)
+        
+    ### Statements
+    
+        #### if, else if, else
+
+            if (<condition>){
+                # execution
+            } elseif (<condition>) {
+                // execution
+            } else {
+                # execution
+            }
+        
+    
+    ### functions
+    
+        function <func_name>()
+        {
+            # function body/output
+        }
+
+        <func_name> input1 input2           # call function
     
     
 ## Tricks
 
     # Variable assignment and filtering
-        $output = Get-Service                               # assign variable
-        $output | Where-Object {$_.Status -eq 'Running'}    # filter to Services that are running
-        
-        
+        $output = Get-Service                                                                                                   # assign variable
+        $output | Where-Object {$_.Status -eq 'Running'}                                                                        # filter to Services that are running
+                                                                            
+    # Changing default object return attributes                                                                 
+        #<command> | Get-Member                                                                                                 # get attributes available to select
+        #<command> | Select-Object <select attributes>                                                                          # select specific attributes (comma separated)
+        #<command> | Select-Object <select attributes> | Where-Object {$_.<attribute> -eq '<chosen attribute>'                  # also filter by object attribute
+        #<command> | Select-Object <select attributes> | Where-Object {$_.<attribute> -eq '<chosen attribute>' | Stop-Service   # can even stop service after filtering results

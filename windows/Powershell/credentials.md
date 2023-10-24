@@ -4,7 +4,6 @@
     
 ## Commands
 
-
     whami                                                                           # see current user
     Get-Credential                                                                  # powershell credential popup window
     $<cred_var_name> = Get-Credential                                               # save credential as variable (cred object)
@@ -23,9 +22,12 @@
     [Security.Cryptography.RNGCryptoServiceProvider]::Create().GetBytes($Key)
     $Key | out-file <key_path>.key
     
-    (Get-Credential).Password | ConvertFrom-SecureString -Key (Get-Content <key_path>.key
+    $temp_cred = Get-Credential
+    $temp_cred.Password | ConvertFrom-SecureString -Key (Get-Content <key_path>.key) | Set-Content <pass_filepath>.txt
     
-    $password = Get-Content <pass_filepath> | ConvertTo-SecureString -Key (Get-Content <key_path>.key
-    $credential = New-Object System.Management.Automation.PSCredential("<user>",$password)
+    $password = Get-Content <pass_filepath>.txt | ConvertTo-SecureString -Key (Get-Content <key_path>.key)
+    $credential = New-Object System.Management.Automation.PSCredential($temp_cred.UserName,$password)
     
     Get-WmiObject -Class Win32_operatingsystem -ComputerName <computername> -Credential $credential
+    
+    

@@ -26,6 +26,10 @@
     Get-ChildItem -Path <path> -Recurse -Include '*.txt'
     Get-ChildItem -Path <path> | Select Name,FullName,LastAccessTime,LastWriteTime,Length
     
+    Clear-content <filepath>
+    Import-CSV <filepath>
+    Out-File <filepath> -Append
+    
 ## General Structure
 
     ### Loops
@@ -82,6 +86,10 @@
         <func_name> input1 input2           # call function
     
     
+## Networking
+
+    Test-Connection -ComputerName <hostname> -Count <int of how many results to show>
+    
 ## Tricks
 
     # Variable assignment and filtering
@@ -93,3 +101,4 @@
         #<command> | Select-Object <select attributes>                                                                          # select specific attributes (comma separated)
         #<command> | Select-Object <select attributes> | Where-Object {$_.<attribute> -eq '<chosen attribute>'                  # also filter by object attribute
         #<command> | Select-Object <select attributes> | Where-Object {$_.<attribute> -eq '<chosen attribute>' | Stop-Service   # can even stop service after filtering results
+        

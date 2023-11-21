@@ -8,9 +8,13 @@
     
 ## General Commands
 
+    Get-Help <command>
+
     Show-Command                        # show powershell command forms window
     Show-Command '<command>'            # get info on specific command  (forms window)  
-    Get-Service                         # get name/status of services
+    
+    <command> | Grid-OUTVIEW            # get output in a UI grid view like resmon
+    
     <var_name> = <value>                # assign variable
     [<var_type>]<var_name> = <value>    # assign variable with explicit type
     <var_name>.GetType()                # check variable type
@@ -28,7 +32,8 @@
     
     Clear-content <filepath>
     Import-CSV <filepath>
-    Out-File <filepath> -Append
+    Out-File -FilePath <filepath>       # -Append -Force
+    Export-CSV -Path <filepath>         # -Delimeter
     
 ## General Structure
 
@@ -89,6 +94,15 @@
 ## Networking
 
     Test-Connection -ComputerName <hostname> -Count <int of how many results to show>
+    
+## Running saved Commands
+
+    Invoke-Item <filepath>              # run commands in File
+    
+## Health Investigation
+
+    Get-Service                         # get name/status of services
+    Get-Process                         # get info on processes currently Running
     
 ## Tricks
 

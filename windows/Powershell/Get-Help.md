@@ -6,5 +6,14 @@
 
     Get-Help <powershell_command>
     
-    IE
+## Examples
+
     Get-Help Get-Variable
+    
+## Parameters
+
+    Get-Help <command>
+        -Examples
+        -Detailed
+        -Full
+        -Online

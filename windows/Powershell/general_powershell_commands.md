@@ -94,6 +94,7 @@
 ## Networking
 
     Test-Connection -ComputerName <hostname> -Count <int of how many results to show>
+    Test-NetConnection -ComputerName <hostname> -Port <port>
     
 ## Running saved Commands
 

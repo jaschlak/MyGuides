@@ -2,7 +2,7 @@
 
     User Management from within Powershell
 
-## Active Directory
+## Get Active Directory
 
     Get-ADUser -Filter {displayname -like "*<partialname>*"}                                                                 # lookup ad user by display name
     Get-ADGroup -Filter {name -like "*<partialgroupname>*"}                                                                 # search for group by partial name
@@ -11,8 +11,6 @@
     Get-ADGroup -Filter {name -like "*<partialgroupname>*"} | Get-ADGroupMember                                             # get users within AD Group    
     Get-ADGroup -Filter {name -like "*<partialgroupname>*"} | Get-ADGroupMember | Select-Object distinguishedName,name      # get users within AD Group (filtered)
     
-
-    Add-ADGroupMember -Identity <groupname> -Members <username>                                                             # add user to active directory
     Get-ADPrincipalGroupMembership -Identity <username>                                                                     # check user was added to active directory
     
     
@@ -27,3 +25,8 @@
     
     # find all users within group
     Get-ADGroup -Filter {name -like "<groupname>"} | Get-ADGroupMember | Select-Object name,@{name="AD Username";Expression={$_.SamAccountName}},UserPrincipalName
+    
+    
+## Add to AD
+
+    Add-ADGroupMember -Identity <groupname> -Members <username>                                                             # add user to active directory

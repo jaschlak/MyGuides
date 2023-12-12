@@ -117,3 +117,13 @@
         #<command> | Select-Object <select attributes> | Where-Object {$_.<attribute> -eq '<chosen attribute>'                  # also filter by object attribute
         #<command> | Select-Object <select attributes> | Where-Object {$_.<attribute> -eq '<chosen attribute>' | Stop-Service   # can even stop service after filtering results
         
+## AD Workflow
+
+    # find username
+    Get-ADUser -Filter {displayname -like "*<partialname>*"} | Select-Object GivenName, Surname,@{name="AD Username";Expression={$_.SamAccountName}},UserPrincipalName
+    
+    # find ad groups
+    Get-ADPrincipalGroupMembership -Identity <ad_username> | Select-Object @{name="ADGroups";Expression={$_.name}}
+    
+    # find all users within group
+    Get-ADGroup -Filter {name -like "<groupname>"} | Get-ADGroupMember | Select-Object name,@{name="AD Username";Expression={$_.SamAccountName}},UserPrincipalName

@@ -27,6 +27,7 @@
     Get-ADGroup -Filter {name -like "<groupname>"} | Get-ADGroupMember | Select-Object name,@{name="AD Username";Expression={$_.SamAccountName}},UserPrincipalName
     
     
+    
 ## Add to AD
 
     Add-ADGroupMember -Identity <groupname> -Members <username>                                                             # add user to active directory

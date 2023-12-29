@@ -14,6 +14,11 @@
     
 ## commands
 
+    ansible-playbook playbook.yaml --check                                      # check mode, not all modules support
+    ansible-playbook playbook.yaml --check --diff                               # see differences between new files/running files
+    ansible-playbook playbook.yaml --syntax-check                               # check syntax of playbook
+    ansible-lint playbook.yaml                                                  # use lint tool to check syntax/inconsistency (gives more info)
+    
     ansible-playbook playbook.yaml
     ansible-playbook -i inventory playbook.yaml
     ansible-playbook -i inventory user_setup.yaml

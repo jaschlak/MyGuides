@@ -67,6 +67,8 @@
     git reflog                                                      # See historical changes that you can rebase on
     git reset --hard HEAD@{<insert head number>}                    # Rebase on that head       
     
+    git config -l                                                   # Show config settings (local/global/system)
+    
     
 ## Invalid Password
 
@@ -104,6 +106,9 @@
     s <all commits you want to squash>
     git commit --ammend -m "<summary of all commits>"               # Should only be one commit with your new summary as a description
     
+## Color coding status messages from git bash if not defaulted
+
+    git config color.ui auto
     
 ## graphing branch history (a few different options
 

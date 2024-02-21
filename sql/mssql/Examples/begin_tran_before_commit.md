@@ -5,9 +5,9 @@
   
   ## Commands
   
-  `BEGIN TRAN`
-  `ROLLBACK`
-  `COMMIT`
+  `BEGIN TRAN`  
+  `ROLLBACK`  
+  `COMMIT`  
   `SELECT @@TRANCOUNT`
   
   ## Example

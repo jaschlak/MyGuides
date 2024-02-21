@@ -13,6 +13,7 @@
   ## Example
   
     BEGIN TRAN
+    
     DELETE FROM <table>
     WHERE ID = <id>
     
@@ -20,6 +21,7 @@
     --    COMMIT
     
     BEGIN TRAN
+    
     UPDATE <table_name>
     SET <column1> = <value>, <column2> = <value>
     WHERE ID = <id>

@@ -6,7 +6,7 @@
   ## Example
   
   `BEGIN TRAN`  
-  DELETE FROM <table>  
+  DELETE FROM <table> 
   WHERE ID = <id>  
   
   `ROLLBACK`  

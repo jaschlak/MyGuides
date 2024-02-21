@@ -3,6 +3,13 @@
   > Begin tran saves whatever commands are performed locally so you can check on things before pushing the changes to the actual sql server.  
   > This eats up memory and blocks tables so don't leave in TRAN state too long
   
+  ## Commands
+  
+  `BEGIN TRAN`
+  `ROLLBACK`
+  `COMMIT`
+  `SELECT @@TRANCOUNT`
+  
   ## Example
   
     BEGIN TRAN

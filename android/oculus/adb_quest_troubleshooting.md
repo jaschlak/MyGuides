@@ -12,14 +12,12 @@
   6) Check ip address of the Quest Settings -> Wifi -> Select Network -> Scroll down to "IP address"
   7) Connect the laptop to your Quest via USB
   8) On the Quest display click the notification to allow usb debugging
-  9) open terminal, run listener server on port 5555, and pass it to wireless
-    ```
-    adb tcpip 5555
-    adb connect <wifi address>:5555
-    ```
+  9) open terminal, run listener server on port 5555, and pass it to wireless  
+    `adb tcpip 5555`  
+    `adb connect <wifi address>:5555`    
   10) Unplug Quest
   
-  You are now connected to the headset
+  > You are now connected to the headset
   
 ## See devices connected
 
@@ -31,4 +29,4 @@
   
 ## See Unity related logs
 
-  `adb logcat | findstr "Unity"
+  `adb logcat | findstr "Unity"`

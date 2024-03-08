@@ -26,6 +26,11 @@
     # find all users within group
     Get-ADGroup -Filter {name -like "<groupname>"} | Get-ADGroupMember | Select-Object name,@{name="AD Username";Expression={$_.SamAccountName}},UserPrincipalName
     
+    # find users in 2 groups
+    $group1 = get-adgroupmember "<group1_name>"
+    $group2 = get-adgroupmember "<group2_name>"
+    compare-object -referenceobject $group1 -differenceobject $group2 -property name -includeequal | where {$_.sideindicator -eq "=="} | select name;
+    
     
     
 ## Add to AD

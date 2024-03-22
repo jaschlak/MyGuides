@@ -35,6 +35,10 @@
     Out-File -FilePath <filepath>       # -Append -Force
     Export-CSV -Path <filepath>         # -Delimeter
     
+## Security
+
+    Get-FileHash -Algorithm SHA256 -Path "<path to file>"
+    
 ## General Structure
 
     ### Loops

@@ -29,11 +29,12 @@
     `set <key> <value>`             # set key value pairs
     `get <key>`                     # key lookup 
     `del <key>`                     # delete key
-> Successful (integer) 1, Unsuccessful (nil)
+> Successful (integer) 1, Unsuccessful (nil)  
+    
     `del <key1> <key2> <key3>`      # delete multiple keys
     `exists <key>`                  # check if key exists
     `exists <key1> <key2>`          # check if key exists - multiple
-> Successful (integer) <number of keys that exist>, Unsuccessful (nil)
+> Successful (integer) \<number of keys that exist\>, Unsuccessful (nil) 
     
     
     # expirations

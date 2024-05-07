@@ -6,7 +6,8 @@
 
 ### Check if ips are in subnet
 
-    # pip3 install netaddr
+# pip3 install netaddr
+
 
     from netaddr import IPNetwork, IPAddress
 
@@ -17,14 +18,14 @@
     subnet_range = IPNetwork(subnet)
 
     if IPAddress(ip1) in IPNetwork(subnet):
-        print('ip1 found')
+        print('ip1: {} found'.format(ip1))
     else:
-        print('ip1 not found')
+        print('ip1: {} not found'.format(ip1))
         
     if IPAddress(ip2) in IPNetwork(subnet):
-        print('ip2 found')
+        print('ip2: {} found'.format(ip2))
     else:
-        print('ip2 not found')
+        print('ip2: {} not found'.format(ip2))
         
     print('first ip in range: {}'.format(subnet_range.network))
         

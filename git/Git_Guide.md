@@ -45,6 +45,15 @@
     git reset --hard <remote name>/<branch name>                    # Resets branch to original position
     git clean -f -d                                                 # Cleans up branch, especially helpful after a reset
     
+## Cherry Picking (single commit from branch b into branch a)
+    git checkout <branchA>
+    git log <branchB> --oneline                                     # note hash from commit to cherrypick
+    git cherry-pick <hash_from_branchB>                             # changes from single commit brought to branchA
+    -->                                                             # fix merge conflicts if any exist
+    git cherry-pick --continue
+    git cherry-pick --abort
+    
+    
 ## Make a new branch with current configuration
 
     git branch <newfeature>                                         # Create a new branch

@@ -12,3 +12,9 @@
     # see all visible hosts
     | metasearch host=* | stats values(source) by host
     
+    # see existing index's to refine search
+    
+    | eventcount summarize=false index=* 
+    | dedup index 
+    | table index 
+    | sort index

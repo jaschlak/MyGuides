@@ -164,3 +164,4 @@
         ssh-keygen -t ecdsa -b 521 -C <comment> 
         or
         ssh-keygen -t ed25519 -C <comment> 
+        ssh-keygen -t ed25519 -a 100 -C <comment>                   # adds key derivation rounds
